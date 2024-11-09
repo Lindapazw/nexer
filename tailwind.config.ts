@@ -21,11 +21,11 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#000000",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#C0C0C0",
           foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
@@ -33,8 +33,10 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#42685A",
           foreground: "hsl(var(--accent-foreground))",
+          hover: "#2A5142",
+          light: "#7A8D82",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -49,6 +51,9 @@ const config: Config = {
           "3": "hsl(var(--chart-3))",
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
+        },
+        body: {
+          DEFAULT: "#FFFFFF",
         },
       },
       borderRadius: {
@@ -67,20 +72,6 @@ const config: Config = {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
-      },
-      extend: {
-        colors: {
-          primary: "42685A",
-          secondary: "7A8D82",
-          accent: {
-            DEFAULT: "42685A",
-            hover: "2A5142",
-          },
-          body: "FFFFFF",
-          muted: "",
-          destructive: "",
-          border: "",
-        },
       },
     },
   },
