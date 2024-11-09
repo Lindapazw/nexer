@@ -10,7 +10,7 @@ import HomeTeam from "./_components/team";
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-[1920px] bg-white mx-auto relative overflow-hidden">
       <HomeHeader />
       <HomeHero />
       <HomeAbout />
