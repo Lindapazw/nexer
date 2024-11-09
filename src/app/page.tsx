@@ -1,5 +1,6 @@
 import HomeAbout from "./_components/about";
 import HomeClients from "./_components/clients";
+import HomeFooter from "./_components/footer";
 import HomeHeader from "./_components/header";
 import HomeHero from "./_components/hero";
 import HomeLocation from "./_components/location";
@@ -18,6 +19,7 @@ export default function Home() {
       <HomeClients />
       <HomeProjects />
       <HomeLocation />
+      <HomeFooter />
     </main>
   );
 }
