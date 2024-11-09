@@ -20,6 +20,7 @@ export default function Home() {
       <HomeProjects />
       <HomeLocation />
       <HomeFooter />
+      <div className="h-[4000px] bg-red-500"></div>
     </main>
   );
 }
