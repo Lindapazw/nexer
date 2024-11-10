@@ -1,3 +1,4 @@
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
