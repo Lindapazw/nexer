@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const HomeAbout = () => {
   return (
-    <section className="container mx-auto h-[90vh] bg-blue-400 flex flex-col justify-center items-start py-4">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-10 p py-4">
+    <section className="container mx-auto flex h-[calc(100vh-3.25rem)] flex-col items-start justify-center py-4">
+      <div className="p grid w-full grid-cols-1 gap-4 py-4 lg:grid-cols-2 xl:gap-10">
         {/* Texto */}
         <div className="lg:order-2">
           <h3 className="h3">IMPULSANDO EL CAMBIO</h3>
@@ -14,7 +14,7 @@ const HomeAbout = () => {
             <span className="span">modelo energético </span>
             sostenible
           </h2>
-          <div className="w-1/3 bg-accent h-1"></div>
+          <div className="h-1 w-1/3 bg-accent"></div>
 
           {/* Texto visible en pantallas pequeñas (sm) */}
           <div className="p my-8">
@@ -26,14 +26,14 @@ const HomeAbout = () => {
             </p>
 
             {/* Texto adicional visible solo en pantallas grandes (lg) */}
-            <p className="hidden lg:block p">
+            <p className="p hidden lg:block">
               Disponemos de un carácter pionero y una predisposición a la
               innovación en todos los ámbitos del sector, creando valor para
               nuestros clientes a través de nuestra especialización y
               capacitación.
             </p>
 
-            <ol className="hidden lg:flex flex-col gap-3 my-4 p xl:my-6">
+            <ol className="p my-4 hidden flex-col gap-3 lg:flex xl:my-6">
               <li className="span flex gap-2">
                 <Check />
                 <p>Expertos en proyectos energéticos</p>
@@ -55,12 +55,12 @@ const HomeAbout = () => {
         </div>
 
         {/* Imagen */}
-        <div className="relative w-full h-[50%] lg:h-full lg:order-1">
+        <div className="relative h-[50%] w-full lg:order-1 lg:h-full">
           <Image
             src="/images/about2.png"
             alt="about Nexer image"
             fill
-            className="object-cover rounded-xl"
+            className="rounded-xl object-cover"
           />
         </div>
       </div>
