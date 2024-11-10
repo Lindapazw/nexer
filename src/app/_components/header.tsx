@@ -51,18 +51,20 @@ const HomeHeader = () => {
       )}
     >
       <div className="container mx-auto flex items-center gap-8">
-        <NexerIcon
-          className={cn("h-9 w-36", {
-            "text-white": !isScreenScrolled,
-            "text-accent": isScreenScrolled,
-          })}
-        />
+        <Link href="/">
+          <NexerIcon
+            className={cn("h-9 w-36", {
+              "text-white": !isScreenScrolled,
+              "text-accent": isScreenScrolled,
+            })}
+          />
+        </Link>
 
         <NavigationMenu className="hidden max-w-full grow justify-start lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), {
+                className={cn(navigationMenuTriggerStyle(), "text-base", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -74,7 +76,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), {
+                className={cn(navigationMenuTriggerStyle(), "text-base", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -86,7 +88,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className={cn({
+                className={cn("text-base", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline data-[state=open]:bg-transparent":
                     !isScreenScrolled,
                 })}
@@ -112,7 +114,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className={cn({
+                className={cn("text-base", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline data-[state=open]:bg-transparent":
                     !isScreenScrolled,
                 })}
@@ -138,7 +140,7 @@ const HomeHeader = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Button className="hidden lg:block">Contáctanos</Button>
+        <Button className="hidden text-base lg:block">Contáctanos</Button>
 
         <div className="block grow lg:hidden"></div>
 
