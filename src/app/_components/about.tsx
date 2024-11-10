@@ -5,10 +5,11 @@ import Image from "next/image";
 const HomeAbout = () => {
   return (
     <section className="container mx-auto h-[90vh] bg-blue-400 flex flex-col justify-center items-start py-4">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 p py-4">
-        <div>
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-10 p py-4">
+        {/* Texto */}
+        <div className="lg:order-2">
           <h3 className="h3">IMPULSANDO EL CAMBIO</h3>
-          <h2 className="h2">
+          <h2 className="h2 xl:my-6">
             Participa en la construcción de un{" "}
             <span className="span">modelo energético </span>
             sostenible
@@ -16,7 +17,7 @@ const HomeAbout = () => {
           <div className="w-1/3 bg-accent h-1"></div>
 
           {/* Texto visible en pantallas pequeñas (sm) */}
-          <div className="p">
+          <div className="p my-8">
             <p className="p">
               Somos una firma independiente especializada en la identificación y
               <span className="span"> desarrollo de proyectos </span>{" "}
@@ -32,7 +33,7 @@ const HomeAbout = () => {
               capacitación.
             </p>
 
-            <ol className="hidden lg:flex flex-col gap-3 my-4 p">
+            <ol className="hidden lg:flex flex-col gap-3 my-4 p xl:my-6">
               <li className="span flex gap-2">
                 <Check />
                 <p>Expertos en proyectos energéticos</p>
@@ -54,7 +55,7 @@ const HomeAbout = () => {
         </div>
 
         {/* Imagen */}
-        <div className="relative w-full h-[50%] lg:h-full">
+        <div className="relative w-full h-[50%] lg:h-full lg:order-1">
           <Image
             src="/images/about2.png"
             alt="about Nexer image"
@@ -66,4 +67,5 @@ const HomeAbout = () => {
     </section>
   );
 };
+
 export default HomeAbout;
