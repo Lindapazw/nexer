@@ -70,13 +70,13 @@ body {
     @apply bg-body text-primary;
   }
   .p {
-    @apply text-primary font-normal text-base;
+    @apply text-primary font-normal text-base lg:text-lg;
   }
   .h1 {
     @apply text-4xl xl:text-[64px] mb-6 font-bold;
   }
   .h2 {
-    @apply text-3xl mb-6 font-normal;
+    @apply text-3xl lg:text-4xl mb-6 font-normal;
   }
   .h3 {
     @apply text-sm lg:text-xl mb-4 font-semibold;
