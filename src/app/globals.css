@@ -69,17 +69,17 @@ body {
   body {
     @apply bg-body text-primary;
   }
-  p {
-    @apply text-secondary;
+  .p {
+    @apply text-base font-normal text-primary lg:text-lg xl:text-xl;
   }
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
   }
   .h2 {
-    @apply mb-6 text-4xl font-bold;
+    @apply mb-6 text-3xl font-normal lg:text-4xl xl:text-6xl;
   }
   .h3 {
-    @apply font-semibold: mb-4 text-xl;
+    @apply mb-4 text-sm font-semibold lg:text-xl;
   }
   .description {
     @apply text-base xl:text-xl xl:leading-8;
@@ -109,5 +109,8 @@ body {
   }
   .active {
     @apply text-accent;
+  }
+  .span {
+    @apply font-bold;
   }
 }
