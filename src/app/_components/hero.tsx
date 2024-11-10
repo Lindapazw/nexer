@@ -15,13 +15,13 @@ const HomeHero = () => {
       <div className="absolute inset-0 h-full w-full bg-black/25"></div>
 
       <div className="container mx-auto">
-        <h1 className="absolute inset-x-0 top-1/4 flex flex-col items-center text-white lg:-translate-y-1/2 lg:items-start">
+        <h1 className="absolute inset-x-0 top-1/4 flex flex-col items-center text-white lg:inset-x-auto lg:top-1/2 lg:-translate-y-1/2 lg:items-start">
           Promoviendo la
           <span className="font-bold">Energía sostenible</span>
           del futuro
         </h1>
 
-        <HeroCards className="absolute inset-x-0 top-1/2 w-full flex-col pb-12 lg:bottom-0 lg:flex-row" />
+        <HeroCards className="absolute inset-x-0 top-1/2 w-full flex-col pb-12 lg:bottom-0 lg:top-auto lg:flex-row" />
       </div>
     </section>
   );
