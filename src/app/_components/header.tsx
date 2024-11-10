@@ -51,7 +51,7 @@ const HomeHeader = () => {
       )}
     >
       <div className="container mx-auto flex items-center gap-8">
-        <Link href="/">
+        <Link href="/#home">
           <NexerIcon
             className={cn("h-9 w-36", {
               "text-white": !isScreenScrolled,

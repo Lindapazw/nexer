@@ -21,7 +21,7 @@ const HomeHero = () => {
           del futuro
         </h1>
 
-        <HeroCards className="absolute inset-x-0 bottom-0 w-full py-6" />
+        <HeroCards className="absolute inset-x-0 bottom-0 w-full pb-12" />
       </div>
     </section>
   );
