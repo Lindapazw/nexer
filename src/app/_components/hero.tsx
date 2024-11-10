@@ -2,7 +2,7 @@ import HeroCards from "./hero-cards";
 
 const HomeHero = () => {
   return (
-    <section className="relative h-screen">
+    <section className="relative min-h-screen">
       <video
         autoPlay
         muted
