@@ -19,18 +19,18 @@ const HeroCards = ({ className, ...props }: HTMLMotionProps<"div">) => {
         <>
           <div className="flex flex-col items-center justify-center gap-2">
             <p className="text-4xl font-bold text-white">
-              <CountUp start={0} end={500} duration={2} delay={0} /> MW
+              +<CountUp start={0} end={20} duration={2} delay={0} />
             </p>
 
-            <p className="text-white">Proyectos desarrollados</p>
+            <p className="text-white">Años de experiencia</p>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-2">
             <p className="text-4xl font-bold text-white">
-              + <CountUp start={0} end={20} duration={2} delay={0} />
+              <CountUp start={0} end={500} duration={2} delay={0} /> MW
             </p>
 
-            <p className="text-white">Años de experiencia</p>
+            <p className="text-white">Proyectos desarrollados</p>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-2">
