@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 const config: Config = {
   darkMode: ["class"],
@@ -73,8 +74,11 @@ const config: Config = {
         xl: "1280px",
         "2xl": "1536px",
       },
+      maxWidth: {
+        "screen-3xl": "1920px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 };
 export default config;

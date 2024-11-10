@@ -72,23 +72,23 @@ body {
   p {
     @apply text-secondary;
   }
-  .h1 {
-    @apply text-4xl xl:text-[64px] mb-6 font-bold;
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
   }
   .h2 {
-    @apply text-4xl mb-6 font-bold;
+    @apply mb-6 text-4xl font-bold;
   }
   .h3 {
-    @apply text-xl mb-4 font-semibold:;
+    @apply font-semibold: mb-4 text-xl;
   }
   .description {
     @apply text-base xl:text-xl xl:leading-8;
   }
   .section {
-    @apply w-full h-screen pt-[68px] xl:pt-[120px];
+    @apply h-screen w-full pt-[68px] xl:pt-[120px];
   }
   .btn {
-    @apply rounded-[10px] w-full uppercase font-medium text-white tracking-[2px] text-[13px] flex justify-center items-center transition-all duration-300;
+    @apply flex w-full items-center justify-center rounded-[10px] text-[13px] font-medium uppercase tracking-[2px] text-white transition-all duration-300;
   }
 
   .btn-sm {
@@ -99,7 +99,7 @@ body {
     @apply h-16;
   }
   .btn-cta {
-    @apply bg-primary h-[54px] rounded-[5px] px-4 transition-all duration-300;
+    @apply h-[54px] rounded-[5px] bg-primary px-4 transition-all duration-300;
   }
   .btn-primary {
     @apply bg-primary;
