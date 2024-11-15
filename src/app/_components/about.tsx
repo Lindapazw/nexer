@@ -52,12 +52,11 @@ const HomeAbout = () => {
       {/* Imagen o Espacio al final */}
       <div className="relative flex-grow">
         <Image
-          src="/images/about2.png"
+          src="/images/about_image.jpg"
           alt="about Nexer image"
           fill
           className="absolute w-full rounded-xl object-cover"
         />
-        ;
       </div>
     </section>
   );
