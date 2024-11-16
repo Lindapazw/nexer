@@ -2,6 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -13,6 +23,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { IsScreenScrolled } from "./header.hooks";
 import NexerIcon from "./nexer-icon";
 
@@ -60,6 +71,7 @@ const projects: { title: string; href: string; description: string }[] = [
 
 const HomeHeader = () => {
   const isScreenScrolled = IsScreenScrolled();
+  const [open, setOpen] = useState(false);
 
   return (
     <header
@@ -183,15 +195,69 @@ const HomeHeader = () => {
 
         <div className="block grow lg:hidden"></div>
 
-        <Button
-          className={cn("flex lg:hidden", {
-            "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
-              !isScreenScrolled,
-          })}
-          size="icon"
-        >
-          <Menu />
-        </Button>
+        <Drawer open={open} onOpenChange={setOpen}>
+          <DrawerTrigger asChild>
+            <Button
+              className={cn("flex lg:hidden", {
+                "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
+                  !isScreenScrolled,
+              })}
+              size="icon"
+            >
+              <Menu />
+            </Button>
+          </DrawerTrigger>
+
+          <DrawerContent>
+            <DrawerHeader className="text-center">
+              <DrawerTitle className="text-lg">Menú</DrawerTitle>
+              <DrawerDescription className="text-base">Nexer</DrawerDescription>
+            </DrawerHeader>
+
+            <Link
+              href="#team"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Conócenos
+            </Link>
+            <Link
+              href="#team"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Equipo
+            </Link>
+            <Link
+              href="#team"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Servicios
+            </Link>
+            <Link
+              href="#team"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Proyectos
+            </Link>
+
+            <DrawerFooter className="pt-2">
+              <DrawerClose asChild>
+                <Button
+                  variant="outline"
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "w-full text-base",
+                  )}
+                >
+                  Cerrar
+                </Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
       </div>
     </header>
   );
