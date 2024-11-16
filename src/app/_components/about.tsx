@@ -67,7 +67,7 @@ const HomeAbout = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>
+                <DialogTitle asChild>
                   <h3 className="mt-4 text-start">
                     Disponemos de un carácter pionero y una predisposición a la
                     innovación en todos los ámbitos del sector, creando valor
@@ -76,7 +76,7 @@ const HomeAbout = () => {
                   </h3>
                 </DialogTitle>
 
-                <DialogDescription>
+                <DialogDescription asChild>
                   <ol className="p my-4 flex-col gap-3">
                     <li className="span flex gap-2">
                       <Check />
@@ -110,6 +110,8 @@ const HomeAbout = () => {
           className="absolute w-full rounded-xl object-cover"
         />
       </div>
+
+      <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };
