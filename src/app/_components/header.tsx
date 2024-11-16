@@ -209,7 +209,7 @@ const HomeHeader = () => {
           </DrawerTrigger>
 
           <DrawerContent>
-            <DrawerHeader className="text-center">
+            <DrawerHeader className="text-center sm:text-center">
               <DrawerTitle className="text-lg">Menú</DrawerTitle>
               <DrawerDescription className="text-base">Nexer</DrawerDescription>
             </DrawerHeader>
