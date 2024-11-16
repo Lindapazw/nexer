@@ -40,7 +40,7 @@ const HomeAbout = () => {
             nuestros clientes a través de nuestra especialización y
             capacitación.
           </p>
-          {/* Lista para pantallas grandes */}
+
           <ol className="p my-4 hidden flex-col gap-3 lg:flex xl:my-6">
             <li className="span flex gap-2">
               <Check />
