@@ -72,7 +72,7 @@ const HomeAbout = () => {
               capacitación.
             </h3>
 
-            <ol className="p my-4 flex-col gap-3">
+            <ol className="p my-4 flex-col gap-3 pb-6">
               <li className="span flex gap-2">
                 <Check />
                 <p>Expertos en proyectos energéticos</p>
