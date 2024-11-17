@@ -143,8 +143,15 @@ const HomeProjects = () => {
                   <DialogContent className="max-h-full overflow-y-auto">
                     <DialogHeader className="sticky -top-6 bg-white py-2">
                       <DialogTitle>{project.name}</DialogTitle>
-                      <DialogDescription>Partner</DialogDescription>
                     </DialogHeader>
+
+                    <p className="p">Año: {project.year}</p>
+                    <p className="p">Ubicación: {project.location}</p>
+                    <p className="p">Potencia: {project.power}</p>
+
+                    {project.description && (
+                      <p className="description">{project.description}</p>
+                    )}
                   </DialogContent>
                 </Dialog>
               ))}
@@ -152,7 +159,6 @@ const HomeProjects = () => {
           </Carousel>
         </div>
       </div>
-
     </section>
   );
 };
