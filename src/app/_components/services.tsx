@@ -6,6 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
 import Autoplay from "embla-carousel-autoplay";
 import { ChartColumnBig, Handshake, Presentation } from "lucide-react";
 import Image from "next/image";
@@ -46,8 +47,8 @@ const HomeServices = () => {
   const autoplayPluginServices = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false }),
   );
-  const autoplayPluginClients = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false }),
+  const autoScrollPluginClients = useRef(
+    AutoScroll({ speed: 0.8, stopOnInteraction: false }),
   );
 
   return (
@@ -104,7 +105,7 @@ const HomeServices = () => {
       <Carousel
         className="container mx-auto mt-6 w-full"
         opts={{ loop: true }}
-        plugins={[autoplayPluginClients.current]}
+        plugins={[autoScrollPluginClients.current]}
       >
         <CarouselContent className="-ml-6">
           {CLIENTS.map((client) => (
