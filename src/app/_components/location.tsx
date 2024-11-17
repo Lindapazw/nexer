@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hour from "./_icons.tsx/hour";
 import Location from "./_icons.tsx/location";
 import Mail from "./_icons.tsx/mail";
@@ -49,14 +48,6 @@ const HomeLocation = () => {
               <p>info@nexer.es</p>
             </li>
           </ol>
-        </div>
-        <div>
-          <Image
-            src="/images/about_image.jpg"
-            alt="about Nexer image"
-            fill
-            className="object-cover"
-          />
         </div>
       </div>
     </div>

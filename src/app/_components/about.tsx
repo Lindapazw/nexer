@@ -7,14 +7,12 @@ const HomeAbout = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:py-20">
+    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
       {/* Texto */}
       <div className="lg:order-2">
         <h3 className="h3">IMPULSANDO EL CAMBIO</h3>
         <h2 className="h2 xl:my-6">
-          Participa en la construcción de un{" "}
-          <span className="span">modelo energético </span>
-          sostenible
+          Participa en la construcción de un modelo energético sostenible
         </h2>
         <div className="h-1 w-1/3 bg-accent"></div>
         <div className="mt-8">
