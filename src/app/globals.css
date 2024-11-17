@@ -114,3 +114,17 @@ body {
     @apply font-bold;
   }
 }
+
+@media (min-aspect-ratio: 16/9) {
+  .hero-video {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .hero-video {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
