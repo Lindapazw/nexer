@@ -19,31 +19,7 @@ const HomeLocation = () => {
       {/* Contenido */}
       <div className="relative pt-6">
         <div className="container">
-          <h2 className="h2 text-center text-white">Nuestra oficina</h2>
-
-          <p className="p mt-6 text-start text-white md:mt-12">
-            Contáctanos para saber más sobre nuestros servicios y cómo podemos
-            ayudarte a impulsar un futuro sostenible.
-          </p>
-
-          <ol className="p my-4 flex w-full flex-col gap-4">
-            <li className="span flex gap-2 text-white">
-              <Location className="h-5 w-5" />
-              <p>Avenida de Bruselas, 31. 28108 Alcobendas, Madrid, España</p>
-            </li>
-            <li className="span flex gap-2 text-white">
-              <Hour className="h-5 w-5" />
-              <p>Lunes - Viernes 09:00 - 18:00</p>
-            </li>
-            <li className="span flex gap-2 text-white">
-              <Phone className="h-6 w-6" />
-              <p>+34 911 68 12 19</p>
-            </li>
-            <li className="span flex gap-2 text-white">
-              <Mail className="h-5 w-5" />
-              <p>info@nexer.es</p>
-            </li>
-          </ol>
+ 
         </div>
       </div>
     </section>
