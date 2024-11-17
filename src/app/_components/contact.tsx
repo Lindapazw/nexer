@@ -13,18 +13,20 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { LoaderCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
+import { sendContactInfo } from "../actions/send-contact-info";
 
-const contactSchema = z.object({
+export const contactSchema = z.object({
   name: z.string().min(3, { message: "Campo obligatorio." }),
   company: z.string().min(3, { message: "Campo obligatorio." }),
   email: z.string().email({ message: "Formato de correo inválido." }),
   message: z.string().min(10, { message: "Campo obligatorio." }),
-  privacyAgreement: z.boolean({
-    message: "Debes aceptar la política de privacidad.",
-  }),
+  privacyAgreement: z.literal<boolean>(true),
 });
 
 const HomeContact = () => {
@@ -39,8 +41,19 @@ const HomeContact = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof contactSchema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+    try {
+      await sendContactInfo(data);
+
+      form.reset();
+      toast.success("¡Gracias por tu mensaje!", {
+        description: "Nos pondremos en contacto con usted lo antes posible.",
+      });
+    } catch {
+      toast.error("Ha ocurrido un error al enviar el mensaje.", {
+        description: "Por favor, inténtalo de nuevo más tarde.",
+      });
+    }
   };
 
   return (
@@ -155,7 +168,11 @@ const HomeContact = () => {
                   />
                 </FormControl>
                 <FormLabel className="!mt-0 text-base font-medium leading-none">
-                  Estoy de acuerdo con la política de privacidad
+                  Estoy de acuerdo con la {""}
+                  <Link href="/#contact" className="underline">
+                    política de privacidad
+                  </Link>
+                  .
                 </FormLabel>
               </FormItem>
             )}
@@ -165,8 +182,11 @@ const HomeContact = () => {
             type="submit"
             variant="secondary"
             className="w-full font-semibold text-accent"
-            disabled={!form.formState.isValid}
+            disabled={form.formState.isSubmitting}
           >
+            {form.formState.isSubmitting && (
+              <LoaderCircle className="animate-spin" />
+            )}
             Enviar
           </Button>
         </form>
