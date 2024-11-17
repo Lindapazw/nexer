@@ -58,7 +58,7 @@ const HomeServices = () => {
       <h2 className="h2">¿Por qué elegir Nexer?</h2>
 
       <div className="flex justify-center">
-        <div className="h-1 w-1/3 bg-accent"></div>
+        <div className="h-1 w-1/5 bg-accent"></div>
       </div>
 
       <p className="p mt-6 md:mt-12">
@@ -103,7 +103,7 @@ const HomeServices = () => {
       <h2 className="h2 mt-5 lg:mt-20">Nuestros clientes</h2>
 
       <div className="flex justify-center">
-        <div className="h-1 w-1/3 bg-accent"></div>
+        <div className="h-1 w-1/5 bg-accent"></div>
       </div>
 
       <Carousel

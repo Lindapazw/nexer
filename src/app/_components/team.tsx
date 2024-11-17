@@ -45,7 +45,9 @@ const HomeTeam = () => {
         <div className="flex grow flex-col items-center justify-center">
           <h2 className="h3 text-white">NUESTRO EQUIPO</h2>
 
-          <h3 className="h2 text-white md:mt-5">Conoce a nuestros expertos</h3>
+          <h3 className="h2 text-center text-white md:mt-5">
+            Conoce a nuestros expertos
+          </h3>
 
           <Carousel
             className="container mx-auto mt-8 w-full md:mt-20"
@@ -67,10 +69,10 @@ const HomeTeam = () => {
 
                     <Card className="absolute inset-x-8 bottom-0 ml-6">
                       <CardHeader className="px-8 py-4">
-                        <CardTitle className="text-center text-xl text-black">
+                        <CardTitle className="text-center text-xl text-accent">
                           José Luis Galindo Iranzo
                         </CardTitle>
-                        <CardDescription className="text-center font-semibold text-accent">
+                        <CardDescription className="text-center font-semibold text-black">
                           Partner
                         </CardDescription>
                       </CardHeader>

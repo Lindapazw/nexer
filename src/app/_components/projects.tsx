@@ -103,7 +103,6 @@ const HomeProjects = () => {
       <h2 className="h2 text-center text-white">
         Conoce algunos de nuestros proyectos
       </h2>
-      <div className="mx-auto h-0.5 w-36 bg-white md:mt-2 md:h-1"></div>
 
       <Carousel
         className="container mx-auto mt-8 w-full md:mt-20"
