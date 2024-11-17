@@ -70,11 +70,11 @@ const HomeTeam = () => {
                   </div>
 
                   <Card className="absolute inset-x-8 bottom-0 ml-6 rounded-md">
-                    <CardHeader className="px-8 py-3">
-                      <CardTitle className="text-accent">
+                    <CardHeader className="px-8 py-4">
+                      <CardTitle className="text-xl text-accent">
                         José Luis Galindo Iranzo
                       </CardTitle>
-                      <CardDescription className="font-semibold text-gray-300">
+                      <CardDescription className="font-semibold text-black">
                         Partner
                       </CardDescription>
                     </CardHeader>
@@ -136,11 +136,11 @@ const HomeTeam = () => {
                   </div>
 
                   <Card className="absolute inset-x-8 bottom-0 ml-6 rounded-md">
-                    <CardHeader className="px-8 py-3">
-                      <CardTitle className="text-accent">
+                    <CardHeader className="px-8 py-4">
+                      <CardTitle className="text-xl text-accent">
                         Manuel de Castro Zurita
                       </CardTitle>
-                      <CardDescription className="font-semibold text-gray-300">
+                      <CardDescription className="font-semibold text-black">
                         Partner
                       </CardDescription>
                     </CardHeader>
@@ -199,11 +199,11 @@ const HomeTeam = () => {
                   </div>
 
                   <Card className="absolute inset-x-8 bottom-0 ml-6 rounded-md">
-                    <CardHeader className="px-8 py-3">
-                      <CardTitle className="text-accent">
+                    <CardHeader className="px-8 py-4">
+                      <CardTitle className="text-xl text-accent">
                         Laura del Hierro Higuera
                       </CardTitle>
-                      <CardDescription className="font-semibold text-gray-300">
+                      <CardDescription className="font-semibold text-black">
                         Managing Director
                       </CardDescription>
                     </CardHeader>
