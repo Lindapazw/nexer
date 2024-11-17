@@ -1,8 +1,3 @@
-import Hour from "./_icons.tsx/hour";
-import Location from "./_icons.tsx/location";
-import Mail from "./_icons.tsx/mail";
-import Phone from "./_icons.tsx/phone";
-
 const HomeLocation = () => {
   return (
     <section className="relative min-h-[80vh]">
@@ -18,9 +13,7 @@ const HomeLocation = () => {
 
       {/* Contenido */}
       <div className="relative pt-6">
-        <div className="container">
- 
-        </div>
+        <div className="container"></div>
       </div>
     </section>
   );
