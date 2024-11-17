@@ -8,7 +8,6 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -133,7 +132,6 @@ const HomeProjects = () => {
                         <div className="span absolute inset-x-0 bottom-0 flex h-16 items-center bg-white pl-32 text-lg">
                           {project.name}
                         </div>
-
                         <div className="absolute bottom-0 left-4 flex aspect-square w-24 flex-col items-center justify-center bg-accent text-2xl font-medium text-white">
                           <span>{project.year}</span>
                           <span className="text-lg">{project.power}</span>
@@ -154,6 +152,7 @@ const HomeProjects = () => {
           </Carousel>
         </div>
       </div>
+
     </section>
   );
 };

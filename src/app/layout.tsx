@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -34,6 +35,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        <Toaster />
       </body>
     </html>
   );
