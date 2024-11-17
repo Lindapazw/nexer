@@ -16,7 +16,6 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useRef } from "react";
-import bg from "../../../public/images/projects_background.png";
 
 const PROJECTS = [
   {
@@ -93,58 +92,68 @@ const HomeProjects = () => {
   );
 
   return (
-    <section
-      className="relative flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6"
-      style={{ backgroundImage: `url(${bg.src})` }}
-    >
-      <div id="projects" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
+    <section className="relative min-h-[calc(100vh-3.25rem)]">
+      {/* imagen */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/project_hita_tardio.jpg")',
+          backgroundAttachment: "fixed",
+        }}
+      />
 
-      <h3 className="h3 text-center text-white">NUESTROS PROYECTOS</h3>
-      <h2 className="h2 text-center text-white">
-        Conoce algunos de nuestros proyectos
-      </h2>
-      <div className="mx-auto h-0.5 w-36 bg-white md:mt-2 md:h-1"></div>
+      {/* Contenido */}
+      <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)]">
+        <div className="flex grow flex-col items-center justify-center">
+          <h2 className="h3 text-white">NUESTROS PROYECTOS</h2>
 
-      <Carousel
-        className="container mx-auto mt-8 w-full md:mt-20"
-        opts={{ loop: true }}
-        plugins={[autoplayPlugin.current]}
-      >
-        <CarouselContent className="-ml-6">
-          {PROJECTS.map((project) => (
-            <Dialog key={project.name}>
-              <DialogTrigger asChild>
-                <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
-                  <div className="relative mb-8 aspect-[3/4] w-full">
-                    <Image
-                      src={project.image}
-                      alt={`${project.name} image`}
-                      fill
-                      className="absolute inset-0 object-cover object-center"
-                    />
+          <h3 className="h2 text-center text-white md:mt-5">
+            Conoce algunos de nuestro proyectos
+          </h3>
 
-                    <div className="span absolute inset-x-0 bottom-0 flex h-16 items-center bg-white pl-32 text-lg">
-                      {project.name}
-                    </div>
+          <Carousel
+            className="container mx-auto mt-8 w-full md:mt-20"
+            opts={{ loop: true }}
+            plugins={[autoplayPlugin.current]}
+          >
+            <CarouselContent className="-ml-6">
+              {PROJECTS.map((project) => (
+                <Dialog key={project.name}>
+                  <DialogTrigger asChild>
+                    <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
+                      <div className="relative aspect-[3/4] w-full">
+                        <Image
+                          src={project.image}
+                          alt={`${project.name} image`}
+                          fill
+                          className="absolute inset-0 object-cover object-center"
+                        />
 
-                    <div className="absolute bottom-0 left-4 flex aspect-square w-24 flex-col items-center justify-center bg-accent text-2xl font-medium text-white">
-                      <span>{project.year}</span>
-                      <span className="text-lg">{project.power}</span>
-                    </div>
-                  </div>
-                </CarouselItem>
-              </DialogTrigger>
+                        <div className="span absolute inset-x-0 bottom-0 flex h-16 items-center bg-white pl-32 text-lg">
+                          {project.name}
+                        </div>
 
-              <DialogContent className="max-h-full overflow-y-auto">
-                <DialogHeader className="sticky -top-6 bg-white py-2">
-                  <DialogTitle>{project.name}</DialogTitle>
-                  <DialogDescription>Partner</DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
-          ))}
-        </CarouselContent>
-      </Carousel>
+                        <div className="absolute bottom-0 left-4 flex aspect-square w-24 flex-col items-center justify-center bg-accent text-2xl font-medium text-white">
+                          <span>{project.year}</span>
+                          <span className="text-lg">{project.power}</span>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-h-full overflow-y-auto">
+                    <DialogHeader className="sticky -top-6 bg-white py-2">
+                      <DialogTitle>{project.name}</DialogTitle>
+                      <DialogDescription>Partner</DialogDescription>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
     </section>
   );
 };

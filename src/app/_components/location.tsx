@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hour from "./_icons.tsx/hour";
 import Location from "./_icons.tsx/location";
 import Mail from "./_icons.tsx/mail";
@@ -6,7 +5,7 @@ import Phone from "./_icons.tsx/phone";
 
 const HomeLocation = () => {
   return (
-    <div className="relative min-h-[80vh]">
+    <section className="relative min-h-[80vh]">
       {/* imagen */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -21,10 +20,6 @@ const HomeLocation = () => {
       <div className="relative pt-6">
         <div className="container">
           <h2 className="h2 text-center text-white">Nuestra oficina</h2>
-
-          <div className="flex w-full justify-center">
-            <div className="h-1 w-1/3 bg-white"></div>
-          </div>
 
           <p className="p mt-6 text-start text-white md:mt-12">
             Contáctanos para saber más sobre nuestros servicios y cómo podemos
@@ -50,16 +45,8 @@ const HomeLocation = () => {
             </li>
           </ol>
         </div>
-        <div>
-          <Image
-            src="/images/about_image.jpg"
-            alt="about Nexer image"
-            fill
-            className="object-cover"
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default HomeLocation;
