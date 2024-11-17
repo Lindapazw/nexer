@@ -41,6 +41,11 @@ const CLIENTS = [
   { name: "Blacksalt", image: "/images/client_blacksalt.png" },
   { name: "Acciona", image: "/images/client_acciona.png" },
   { name: "SunEdison", image: "/images/client_sunedison.png" },
+  { name: "Ekhi", image: "/images/client_ekhi.png" },
+  { name: "Estabanell", image: "/images/client_estabanell.jpeg" },
+  { name: "Millenium", image: "/images/client_millennium.png" },
+  { name: "Opengy", image: "/images/client_opengy.webp" },
+  { name: "Reden", image: "/images/client_reden.svg" },
 ];
 
 const HomeServices = () => {
