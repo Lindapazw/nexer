@@ -21,10 +21,6 @@ const HomeLocation = () => {
         <div className="container">
           <h2 className="h2 text-center text-white">Nuestra oficina</h2>
 
-          <div className="flex w-full justify-center">
-            <div className="h-1 w-1/3 bg-white"></div>
-          </div>
-
           <p className="p mt-6 text-start text-white md:mt-12">
             Contáctanos para saber más sobre nuestros servicios y cómo podemos
             ayudarte a impulsar un futuro sostenible.
