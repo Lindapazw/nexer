@@ -5,7 +5,7 @@ import Phone from "./_icons.tsx/phone";
 
 const HomeLocation = () => {
   return (
-    <div className="relative min-h-[80vh]">
+    <section className="relative min-h-[80vh]">
       {/* imagen */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -50,7 +50,7 @@ const HomeLocation = () => {
           </ol>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default HomeLocation;

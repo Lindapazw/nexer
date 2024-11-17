@@ -76,7 +76,7 @@ body {
     @apply text-4xl md:text-5xl lg:text-6xl;
   }
   .h2 {
-    @apply mb-6 text-3xl font-normal lg:text-4xl xl:text-6xl;
+    @apply mb-6 text-3xl font-normal lg:text-4xl xl:text-5xl;
   }
   .h3 {
     @apply mb-4 text-sm font-semibold lg:text-xl;
