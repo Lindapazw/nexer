@@ -114,7 +114,7 @@ const HomeServices = () => {
         <CarouselContent className="-ml-10 xl:justify-center">
           {CLIENTS.map((client) => (
             <CarouselItem key={client.name} className="basis-auto pl-10">
-              <div className="relative aspect-video h-16 lg:h-32">
+              <div className="relative aspect-video h-16 lg:h-44">
                 <Image
                   src={client.image}
                   alt={client.name}
