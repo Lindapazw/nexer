@@ -43,7 +43,7 @@ const CLIENTS = [
   { name: "SunEdison", image: "/images/client_sunedison.png" },
   { name: "Ekhi", image: "/images/client_ekhi.png" },
   { name: "Estabanell", image: "/images/client_estabanell.jpeg" },
-  { name: "Millenium", image: "/images/client_millennium.png" },
+  { name: "Millenium", image: "/images/client_millennium2.jpeg" },
   { name: "Opengy", image: "/images/client_opengy.webp" },
   { name: "Reden", image: "/images/client_reden.svg" },
 ];
