@@ -63,7 +63,7 @@ const HomeServices = () => {
       <h2 className="h2">¿Por qué elegir Nexer?</h2>
 
       <div className="flex justify-center">
-        <div className="h-1 w-1/3 bg-accent"></div>
+        <div className="h-1 w-1/5 bg-accent"></div>
       </div>
 
       <p className="p mt-6 md:mt-12">
@@ -108,7 +108,7 @@ const HomeServices = () => {
       <h2 className="h2 mt-5 lg:mt-20">Nuestros clientes</h2>
 
       <div className="flex justify-center">
-        <div className="h-1 w-1/3 bg-accent"></div>
+        <div className="h-1 w-1/5 bg-accent"></div>
       </div>
 
       <Carousel
@@ -119,7 +119,7 @@ const HomeServices = () => {
         <CarouselContent className="-ml-10 xl:justify-center">
           {CLIENTS.map((client) => (
             <CarouselItem key={client.name} className="basis-auto pl-10">
-              <div className="relative aspect-video h-16 lg:h-32">
+              <div className="relative aspect-video h-16 lg:h-44">
                 <Image
                   src={client.image}
                   alt={client.name}
