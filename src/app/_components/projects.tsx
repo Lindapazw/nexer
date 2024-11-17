@@ -159,6 +159,8 @@ const HomeProjects = () => {
           </Carousel>
         </div>
       </div>
+
+      <div id="projects" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };

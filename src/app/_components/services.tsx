@@ -58,8 +58,6 @@ const HomeServices = () => {
 
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center">
-      <div id="services" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
-
       <h2 className="h2">¿Por qué elegir Nexer?</h2>
 
       <div className="flex justify-center">
@@ -116,7 +114,7 @@ const HomeServices = () => {
         opts={{ loop: true }}
         plugins={[autoScrollPluginClients.current]}
       >
-        <CarouselContent className="-ml-10 xl:justify-center">
+        <CarouselContent className="-ml-10">
           {CLIENTS.map((client) => (
             <CarouselItem key={client.name} className="basis-auto pl-10">
               <div className="relative aspect-video h-16 lg:h-44">
@@ -131,6 +129,8 @@ const HomeServices = () => {
           ))}
         </CarouselContent>
       </Carousel>
+
+      <div id="services" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };

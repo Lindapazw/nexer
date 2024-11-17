@@ -249,6 +249,8 @@ const HomeTeam = () => {
           </Carousel>
         </div>
       </div>
+
+      <div id="team" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };
