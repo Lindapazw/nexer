@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hour from "./_icons.tsx/hour";
 import Location from "./_icons.tsx/location";
 import Mail from "./_icons.tsx/mail";
@@ -5,7 +6,7 @@ import Phone from "./_icons.tsx/phone";
 
 const HomeLocation = () => {
   return (
-    <div className="relative min-h-[80vh] w-full">
+    <div className="relative min-h-[80vh]">
       {/* imagen */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -17,7 +18,7 @@ const HomeLocation = () => {
       />
 
       {/* Contenido */}
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center py-6">
+      <div className="relative pt-6">
         <div className="container">
           <h2 className="h2 text-center text-white">Nuestra oficina</h2>
 
@@ -49,8 +50,14 @@ const HomeLocation = () => {
             </li>
           </ol>
         </div>
-
-        <div className="min-h-[25vh] w-full bg-red-400">mapa</div>
+        <div>
+          <Image
+            src="/images/about_image.jpg"
+            alt="about Nexer image"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );
