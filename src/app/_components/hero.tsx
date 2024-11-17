@@ -17,6 +17,8 @@ const HomeHero = () => {
           alt="hero video"
           fill
           className="h-full w-full"
+          priority
+          sizes="50vw"
         />
       </video>
 

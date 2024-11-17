@@ -45,7 +45,7 @@ const CLIENTS = [
   { name: "Estabanell", image: "/images/client_estabanell.jpeg" },
   { name: "Millenium", image: "/images/client_millennium2.jpeg" },
   { name: "Opengy", image: "/images/client_opengy.webp" },
-  { name: "Reden", image: "/images/client_reden.svg" },
+  { name: "Reden", image: "/images/client_reden.png" },
 ];
 
 const HomeServices = () => {
@@ -123,6 +123,7 @@ const HomeServices = () => {
                   alt={client.name}
                   fill
                   className="object-scale-down object-center"
+                  sizes="(max-width: 768px) 10rem, 20rem"
                 />
               </div>
             </CarouselItem>
