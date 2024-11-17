@@ -101,7 +101,11 @@ const HomeHeader = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Button className="hidden text-base lg:block" asChild>
+        <Button
+          className="hidden text-base lg:block"
+          asChild
+          aria-labelledby="botón de contacto"
+        >
           <Link href="#contact">Contáctanos</Link>
         </Button>
 
@@ -110,6 +114,7 @@ const HomeHeader = () => {
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerTrigger asChild>
             <Button
+              aria-labelledby="botón de menú"
               className={cn("flex lg:hidden", {
                 "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                   !isScreenScrolled,
@@ -158,6 +163,7 @@ const HomeHeader = () => {
             <DrawerFooter className="pt-2">
               <DrawerClose asChild>
                 <Button
+                  aria-labelledby="botón de cerrar"
                   variant="outline"
                   className={cn(
                     navigationMenuTriggerStyle(),
