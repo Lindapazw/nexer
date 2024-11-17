@@ -169,7 +169,11 @@ const HomeContact = () => {
                 </FormControl>
                 <FormLabel className="!mt-0 text-base font-medium leading-none">
                   Estoy de acuerdo con la {""}
-                  <Link href="/#contact" className="underline">
+                  <Link
+                    href="/#contact"
+                    className="underline"
+                    aria-label="Leer más sobre la política de privacidad"
+                  >
                     política de privacidad
                   </Link>
                   .
@@ -179,6 +183,7 @@ const HomeContact = () => {
           />
 
           <Button
+            aria-labelledby="botón de enviar email"
             type="submit"
             variant="secondary"
             className="w-full font-semibold text-accent"
