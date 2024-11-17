@@ -40,7 +40,7 @@ const HomeHeader = () => {
       )}
     >
       <div className="container mx-auto flex items-center gap-8">
-        <Link href="/#home">
+        <Link href="/#home" aria-label="Ir al inicio de la web">
           <NexerIcon
             className={cn("h-9 w-36", {
               "text-white": !isScreenScrolled,
@@ -59,7 +59,9 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#about">Conócenos</Link>
+                <Link href="#about" aria-label="Ir a la sección de conócenos">
+                  Conócenos
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -71,7 +73,9 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#team">Equipo</Link>
+                <Link href="#team" aria-label="Ir a la sección de equipo">
+                  Equipo
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -83,7 +87,12 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#services">Servicios</Link>
+                <Link
+                  href="#services"
+                  aria-label="Ir a la sección de servicios"
+                >
+                  Servicios
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -95,7 +104,12 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#projects">Proyectos</Link>
+                <Link
+                  href="#projects"
+                  aria-label="Ir a la sección de proyectos"
+                >
+                  Proyectos
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -106,7 +120,9 @@ const HomeHeader = () => {
           asChild
           aria-labelledby="botón de contacto"
         >
-          <Link href="#contact">Contáctanos</Link>
+          <Link href="#contact" aria-label="Ir a la sección de contacto">
+            Contáctanos
+          </Link>
         </Button>
 
         <div className="block grow lg:hidden"></div>
@@ -132,6 +148,7 @@ const HomeHeader = () => {
             </DrawerHeader>
 
             <Link
+              aria-label="Ir a la sección de acerca de nosotros"
               href="#about"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
@@ -139,6 +156,7 @@ const HomeHeader = () => {
               Conócenos
             </Link>
             <Link
+              aria-label="Ir a la sección de equipo"
               href="#team"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
@@ -146,6 +164,7 @@ const HomeHeader = () => {
               Equipo
             </Link>
             <Link
+              aria-label="Ir a la sección de servicios"
               href="#services"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
@@ -153,6 +172,7 @@ const HomeHeader = () => {
               Servicios
             </Link>
             <Link
+              aria-label="Ir a la sección de proyectos"
               href="#projects"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
