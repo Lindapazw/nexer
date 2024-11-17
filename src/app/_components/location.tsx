@@ -13,7 +13,7 @@ const HomeLocation = () => {
 
       {/* Contenido */}
       <div className="relative pt-6">
-        <div className="container"></div>
+        <div className="container">Contenido</div>
       </div>
     </section>
   );
