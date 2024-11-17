@@ -52,24 +52,24 @@ const HomeServices = () => {
   );
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center text-center">
+    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center">
       <div id="services" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
-      <h2 className="text-2xl font-bold sm:text-3xl">¿Por qué elegir Nexer?</h2>
+      <h2 className="h2">¿Por qué elegir Nexer?</h2>
 
       <div className="mx-auto mt-2 h-0.5 w-36 bg-accent md:mt-4 md:h-1"></div>
 
-      <p className="mt-4 md:mt-6">
+      <p className="p mt-6 md:mt-12">
         En Nexer, impulsamos la transición hacia un modelo energético sostenible
         con soluciones personalizadas.
       </p>
-      <p>
+      <p className="p">
         Descubre cómo nuestro compromiso y experiencia pueden marcar la
         diferencia.
       </p>
 
       <Carousel
-        className="mt-6 w-full"
+        className="mt-20 w-full"
         opts={{ startIndex: 1, loop: true }}
         plugins={[autoplayPluginServices.current]}
       >
@@ -90,7 +90,7 @@ const HomeServices = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>{service.description}</p>
+                  <p className="p text-white">{service.description}</p>
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -98,7 +98,7 @@ const HomeServices = () => {
         </CarouselContent>
       </Carousel>
 
-      <h2 className="mt-6 text-2xl font-bold sm:text-3xl">Nuestros clientes</h2>
+      <h2 className="h2 mt-20">Nuestros clientes</h2>
 
       <div className="mx-auto mt-2 h-0.5 w-36 bg-accent md:mt-4 md:h-1"></div>
 
@@ -107,13 +107,10 @@ const HomeServices = () => {
         opts={{ loop: true }}
         plugins={[autoScrollPluginClients.current]}
       >
-        <CarouselContent className="-ml-6">
+        <CarouselContent className="-ml-10">
           {CLIENTS.map((client) => (
-            <CarouselItem
-              key={client.name}
-              className="basis-1/3 pl-6 md:basis-1/4 lg:basis-1/5 xl:basis-1/6"
-            >
-              <div className="relative h-16">
+            <CarouselItem key={client.name} className="basis-auto pl-10">
+              <div className="relative aspect-video h-16">
                 <Image
                   src={client.image}
                   alt={client.name}
