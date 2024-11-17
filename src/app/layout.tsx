@@ -1,7 +1,11 @@
+import dayjs from "dayjs";
+import "dayjs/locale/es";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
+dayjs.locale("es");
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
