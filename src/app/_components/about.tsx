@@ -1,16 +1,11 @@
 "use client";
-import { DialogHeader } from "@/components/ui/dialog";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-  DialogTrigger,
-} from "@radix-ui/react-dialog";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const HomeAbout = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <section className="xl: container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:py-20">
       {/* Texto */}
@@ -60,46 +55,43 @@ const HomeAbout = () => {
             </li>
           </ol>
         </div>
-        <div className="mb-8 lg:hidden">
-          <Dialog>
-            <DialogTrigger>
-              <p className="font-bold underline">Ver más</p>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>
-                  <h3 className="mt-4 text-start">
-                    Disponemos de un carácter pionero y una predisposición a la
-                    innovación en todos los ámbitos del sector, creando valor
-                    para nuestros clientes a través de nuestra especialización y
-                    capacitación.
-                  </h3>
-                </DialogTitle>
 
-                <DialogDescription>
-                  <ol className="p my-4 flex-col gap-3">
-                    <li className="span flex gap-2">
-                      <Check />
-                      <p>Expertos en proyectos energéticos</p>
-                    </li>
-                    <li className="span flex gap-2">
-                      <Check />
-                      <p>Equipo interdisciplinario</p>
-                    </li>
-                    <li className="span flex gap-2">
-                      <Check />
-                      <p>Soluciones sostenibles</p>
-                    </li>
-                    <li className="span flex gap-2">
-                      <Check />
-                      <p>Multitecnología</p>
-                    </li>
-                  </ol>
-                </DialogDescription>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
-        </div>
+        <button
+          className="font-bold underline lg:hidden"
+          onClick={() => setVisible((prev) => !prev)}
+        >
+          Ver más
+        </button>
+
+        {visible && (
+          <>
+            <h3 className="mt-4 text-start">
+              Disponemos de un carácter pionero y una predisposición a la
+              innovación en todos los ámbitos del sector, creando valor para
+              nuestros clientes a través de nuestra especialización y
+              capacitación.
+            </h3>
+
+            <ol className="p my-4 flex-col gap-3">
+              <li className="span flex gap-2">
+                <Check />
+                <p>Expertos en proyectos energéticos</p>
+              </li>
+              <li className="span flex gap-2">
+                <Check />
+                <p>Equipo interdisciplinario</p>
+              </li>
+              <li className="span flex gap-2">
+                <Check />
+                <p>Soluciones sostenibles</p>
+              </li>
+              <li className="span flex gap-2">
+                <Check />
+                <p>Multitecnología</p>
+              </li>
+            </ol>
+          </>
+        )}
       </div>
 
       <div className="relative flex-grow">
@@ -110,6 +102,8 @@ const HomeAbout = () => {
           className="absolute w-full rounded-xl object-cover"
         />
       </div>
+
+      <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };

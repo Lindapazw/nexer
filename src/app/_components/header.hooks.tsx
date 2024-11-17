@@ -12,6 +12,8 @@ export const IsScreenScrolled = () => {
       setIsScrolled(window.scrollY > 60);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {

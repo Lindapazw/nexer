@@ -209,13 +209,13 @@ const HomeHeader = () => {
           </DrawerTrigger>
 
           <DrawerContent>
-            <DrawerHeader className="text-center">
+            <DrawerHeader className="text-center sm:text-center">
               <DrawerTitle className="text-lg">Menú</DrawerTitle>
               <DrawerDescription className="text-base">Nexer</DrawerDescription>
             </DrawerHeader>
 
             <Link
-              href="#team"
+              href="#about"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
             >
@@ -229,14 +229,14 @@ const HomeHeader = () => {
               Equipo
             </Link>
             <Link
-              href="#team"
+              href="#services"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
             >
               Servicios
             </Link>
             <Link
-              href="#team"
+              href="#projects"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
             >
