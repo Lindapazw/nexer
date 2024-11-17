@@ -43,11 +43,9 @@ const HomeTeam = () => {
       />
 
       <div className="flex grow flex-col items-center justify-center py-4 md:py-16">
-        <h2 className="z-10 text-sm font-medium md:text-lg">NUESTRO EQUIPO</h2>
+        <h2 className="h3 z-10">NUESTRO EQUIPO</h2>
 
-        <h3 className="z-10 mt-3 text-2xl font-medium md:mt-5 md:text-4xl">
-          Conoce a nuestros expertos
-        </h3>
+        <h3 className="h2 z-10 md:mt-5">Conoce a nuestros expertos</h3>
 
         <div className="z-10 mt-2 h-0.5 w-36 bg-white md:mt-4 md:h-1"></div>
 
