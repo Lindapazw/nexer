@@ -142,16 +142,15 @@ const HomeTeam = () => {
     <section className="relative min-h-[calc(100vh-3.25rem)] bg-transparent">
       {/* imágenes */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="bg-attach-scroll md:bg-attach-fixed absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
             'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/about_image.jpg")',
-          backgroundAttachment: "fixed",
         }}
       />
 
       {/* Contenido */}
-      <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)]">
+      <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
           <h2 className="h3 text-white">NUESTRO EQUIPO</h2>
 
@@ -160,7 +159,7 @@ const HomeTeam = () => {
           </h3>
 
           <Carousel
-            className="container mx-auto mt-8 w-full md:mt-20 xl:px-36"
+            className="container mx-auto mt-0 w-full px-6 md:mt-8 md:px-0 lg:mt-20 xl:px-36"
             opts={{ startIndex: 1, loop: true }}
             plugins={[autoplayPlugin.current]}
           >
@@ -180,11 +179,11 @@ const HomeTeam = () => {
                       </div>
 
                       <Card className="absolute inset-x-8 bottom-0 ml-6">
-                        <CardHeader className="px-8 py-4">
-                          <CardTitle className="text-center text-xl text-accent">
+                        <CardHeader className="px-4 py-2 md:px-8 md:py-4">
+                          <CardTitle className="text-center text-sm text-accent md:text-xl">
                             {member.name}
                           </CardTitle>
-                          <CardDescription className="text-center font-semibold text-black">
+                          <CardDescription className="text-center text-xs font-semibold text-black md:text-sm">
                             {member.title}
                           </CardDescription>
                         </CardHeader>

@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -63,14 +64,14 @@ const HomeAbout = () => {
 
         {visible && (
           <>
-            <h3 className="mt-4 text-start">
+            <h3 className="mt-4 text-start lg:hidden">
               Disponemos de un carácter pionero y una predisposición a la
               innovación en todos los ámbitos del sector, creando valor para
               nuestros clientes a través de nuestra especialización y
               capacitación.
             </h3>
 
-            <ol className="p my-4 flex-col gap-3 pb-6">
+            <ol className="p my-4 flex-col gap-3 pb-6 lg:hidden">
               <li className="span flex gap-2">
                 <Check />
                 <p>Expertos en proyectos energéticos</p>
@@ -92,7 +93,7 @@ const HomeAbout = () => {
         )}
       </div>
 
-      <div className="relative flex-grow">
+      <div className={cn("relative flex-grow", visible && "hidden lg:block")}>
         <Image
           src="/images/about_image.jpg"
           alt="about Nexer image"

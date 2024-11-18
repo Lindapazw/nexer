@@ -103,16 +103,15 @@ const HomeProjects = () => {
     <section className="relative min-h-[calc(100vh-3.25rem)]">
       {/* imagen */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="bg-attach-scroll md:bg-attach-fixed absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
             'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/project_hita_tardio.jpg")',
-          backgroundAttachment: "fixed",
         }}
       />
 
       {/* Contenido */}
-      <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)]">
+      <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
           <h2 className="h3 text-white">NUESTROS PROYECTOS</h2>
 
@@ -121,7 +120,7 @@ const HomeProjects = () => {
           </h3>
 
           <Carousel
-            className="container mx-auto mt-8 w-full md:mt-20 xl:px-36"
+            className="container mx-auto mt-0 w-full sm:mt-8 md:mt-20 xl:px-36"
             opts={{ loop: true }}
             plugins={[autoplayPlugin.current]}
           >
@@ -130,7 +129,7 @@ const HomeProjects = () => {
                 <Dialog key={project.name}>
                   <DialogTrigger asChild>
                     <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
-                      <div className="relative h-[30rem] w-full">
+                      <div className="relative aspect-[3/4] w-full">
                         <Image
                           src={project.image}
                           alt={`${project.name} image`}
@@ -139,12 +138,14 @@ const HomeProjects = () => {
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
 
-                        <div className="span absolute inset-x-0 bottom-0 flex h-16 items-center bg-white pl-32 text-lg">
+                        <div className="span absolute inset-x-0 bottom-0 flex h-12 items-center bg-white pl-24 text-xs md:h-16 md:pl-32 md:text-lg">
                           {project.name}
                         </div>
-                        <div className="absolute bottom-0 left-4 flex aspect-square w-24 flex-col items-center justify-center bg-accent text-2xl font-medium text-white">
-                          <span>{project.year}</span>
-                          <span className="text-lg">{project.power}</span>
+                        <div className="absolute bottom-0 left-4 flex aspect-square w-16 flex-col items-center justify-center bg-accent text-sm font-medium text-white md:w-24 md:text-2xl">
+                          <span className="">{project.year}</span>
+                          <span className="text-xs md:text-lg">
+                            {project.power}
+                          </span>
                         </div>
                       </div>
                     </CarouselItem>
