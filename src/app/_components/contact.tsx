@@ -62,7 +62,7 @@ const HomeContact = () => {
       <div className="">
         <h2 className="h2">Cada paso cuenta</h2>
 
-        <p className="p">Estás mas cerda de construir un futuro sostenible</p>
+        <p className="p">Estás mas cerca de construir un futuro sostenible</p>
       </div>
 
       <Form {...form}>
