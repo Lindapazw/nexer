@@ -115,6 +115,16 @@ body {
   }
 }
 
+@layer utilities {
+  .bg-attach-fixed {
+    background-attachment: fixed;
+  }
+
+  .bg-attach-scroll {
+    background-attachment: scroll;
+  }
+}
+
 @media (min-aspect-ratio: 16/9) {
   .hero-video {
     /* height = 100 * (9 / 16) = 56.25 */
