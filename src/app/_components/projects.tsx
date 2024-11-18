@@ -8,6 +8,7 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -83,6 +84,14 @@ const PROJECTS = [
     power: "11,4 MW",
     description: "",
   },
+  {
+    name: "PF Neosol",
+    image: "/images/project_neosol.jpg",
+    year: "2024",
+    location: "Villanueva del Pardillo (Madrid)",
+    power: "10 MW",
+    description: "Primera planta",
+  },
 ];
 
 const HomeProjects = () => {
@@ -127,6 +136,7 @@ const HomeProjects = () => {
                           alt={`${project.name} image`}
                           fill
                           className="absolute inset-0 object-cover object-center"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
 
                         <div className="span absolute inset-x-0 bottom-0 flex h-16 items-center bg-white pl-32 text-lg">
@@ -143,6 +153,7 @@ const HomeProjects = () => {
                   <DialogContent className="max-h-full overflow-y-auto">
                     <DialogHeader className="sticky -top-6 bg-white py-2">
                       <DialogTitle>{project.name}</DialogTitle>
+                      <DialogDescription>{project.power}</DialogDescription>
                     </DialogHeader>
 
                     <p className="p">Año: {project.year}</p>
@@ -159,6 +170,8 @@ const HomeProjects = () => {
           </Carousel>
         </div>
       </div>
+
+      <div id="projects" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };

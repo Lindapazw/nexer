@@ -64,6 +64,7 @@ const HomeTeam = () => {
                         alt="team"
                         fill
                         className="absolute inset-0 object-cover object-center"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
 
@@ -131,6 +132,7 @@ const HomeTeam = () => {
                         alt="team"
                         fill
                         className="absolute inset-0 object-cover object-center"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
 
@@ -195,6 +197,7 @@ const HomeTeam = () => {
                         alt="team"
                         fill
                         className="absolute inset-0 object-cover object-center"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
 
@@ -249,6 +252,8 @@ const HomeTeam = () => {
           </Carousel>
         </div>
       </div>
+
+      <div id="team" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
 };

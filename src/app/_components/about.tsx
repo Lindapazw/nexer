@@ -98,6 +98,8 @@ const HomeAbout = () => {
           alt="about Nexer image"
           fill
           className="absolute w-full rounded-xl object-cover"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          priority
         />
       </div>
 
