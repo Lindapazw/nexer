@@ -11,6 +11,7 @@ const HomeLocation = () => {
         }}
       />
 
+      {/* contenido */}
       <div className="relative pt-6">
         <div className="container">Contenido</div>
       </div>
