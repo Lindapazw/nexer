@@ -60,11 +60,7 @@ const HomeServices = () => {
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center">
       <h2 className="h2">¿Por qué elegir Nexer?</h2>
 
-      <div className="flex justify-center">
-        <div className="h-1 w-1/5 bg-accent"></div>
-      </div>
-
-      <p className="p mt-6 md:mt-12">
+      <p className="p">
         En Nexer, impulsamos la transición hacia un modelo energético sostenible
         con soluciones personalizadas.
       </p>
@@ -74,7 +70,7 @@ const HomeServices = () => {
       </p>
 
       <Carousel
-        className="w-full lg:mt-20"
+        className="w-full lg:mt-10 xl:px-36"
         opts={{ startIndex: 1, loop: true }}
         plugins={[autoplayPluginServices.current]}
       >
@@ -104,20 +100,20 @@ const HomeServices = () => {
       </Carousel>
 
       <h2 className="h2 mt-5 lg:mt-20">Nuestros clientes</h2>
-
-      <div className="flex justify-center">
-        <div className="h-1 w-1/5 bg-accent"></div>
-      </div>
+      <p className="p">
+        Nos enorgullece colaborar con empresas comprometidas con un futuro más
+        sostenible.
+      </p>
 
       <Carousel
-        className="container mx-auto mt-2 w-full lg:mt-10"
+        className="container mx-auto w-full xl:mt-5"
         opts={{ loop: true }}
         plugins={[autoScrollPluginClients.current]}
       >
         <CarouselContent className="-ml-10">
           {CLIENTS.map((client) => (
             <CarouselItem key={client.name} className="basis-auto pl-10">
-              <div className="relative aspect-video h-16 lg:h-44">
+              <div className="relative aspect-video h-16 lg:h-32">
                 <Image
                   src={client.image}
                   alt={client.name}

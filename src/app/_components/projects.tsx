@@ -121,7 +121,7 @@ const HomeProjects = () => {
           </h3>
 
           <Carousel
-            className="container mx-auto mt-8 w-full md:mt-20"
+            className="container mx-auto mt-8 w-full md:mt-20 xl:px-36"
             opts={{ loop: true }}
             plugins={[autoplayPlugin.current]}
           >
@@ -130,7 +130,7 @@ const HomeProjects = () => {
                 <Dialog key={project.name}>
                   <DialogTrigger asChild>
                     <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
-                      <div className="relative aspect-[3/4] w-full">
+                      <div className="relative h-[30rem] w-full">
                         <Image
                           src={project.image}
                           alt={`${project.name} image`}
