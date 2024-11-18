@@ -71,6 +71,7 @@ const HomeContact = () => {
             alt="contact image"
             fill
             className="absolute min-h-full w-full rounded-xl object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
       </div>
