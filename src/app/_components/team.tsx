@@ -140,7 +140,7 @@ const HomeTeam = () => {
 
   return (
     <section className="relative min-h-[calc(100vh-3.25rem)] bg-transparent">
-      {/* imagen */}
+      {/* imágenes */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
