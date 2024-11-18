@@ -1,3 +1,4 @@
+import Image from "next/image";
 import HomeAbout from "./_components/about";
 import HomeContact from "./_components/contact";
 import HomeFooter from "./_components/footer";
@@ -20,6 +21,20 @@ export default function Home() {
       <HomeContact />
       <HomeLocation />
       <HomeFooter />
+
+      <a
+        className="fixed bottom-6 right-6 hidden md:block xl:bottom-20 xl:right-20"
+        href="https://wa.link/r9o556"
+        target="_blank"
+      >
+        <Image
+          src="/logos/logo_whatsapp.png"
+          alt="whatsapp"
+          className="h-full"
+          width={64}
+          height={64}
+        />
+      </a>
     </main>
   );
 }

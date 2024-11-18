@@ -14,7 +14,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderCircle } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -57,28 +56,18 @@ const HomeContact = () => {
   };
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col items-center justify-center gap-20 py-6 lg:flex-row">
+    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col items-center justify-center py-6 lg:flex-row lg:gap-20">
       <div id="contact" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
-      <div className="flex flex-col">
+      <div className="">
         <h2 className="h2">Cada paso cuenta</h2>
 
         <p className="p">Estás mas cerda de construir un futuro sostenible</p>
-
-        <div className="relative flex-1 basis-full">
-          <Image
-            src="/images/project_valdesolar.jpg"
-            alt="contact image"
-            fill
-            className="absolute min-h-full w-full rounded-xl object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-        </div>
       </div>
 
       <Form {...form}>
         <form
-          className="flex grow flex-col gap-6 rounded-md bg-accent p-8 text-white"
+          className="mt-8 flex flex-col gap-6 rounded-md bg-accent p-8 text-white"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <h3 className="h3 mb-0 text-center">¿Hablamos?</h3>
