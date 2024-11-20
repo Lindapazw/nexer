@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroCards from "./hero-cards";
 
@@ -25,15 +28,30 @@ const HomeHero = () => {
       <div className="absolute inset-0 h-full w-full bg-black/25"></div>
 
       <div className="container mx-auto">
-        <h1 className="absolute inset-x-0 top-1/4 flex flex-col items-center text-white lg:inset-x-auto lg:top-1/2 lg:-translate-y-1/2 lg:items-start">
+        <motion.h1
+          className="absolute inset-x-0 top-1/4 flex flex-col items-center text-white lg:inset-x-auto lg:top-1/2 lg:-translate-y-1/2 lg:items-start"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           Promoviendo la
-          <span className="font-bold">Energía sostenible</span>
+          <motion.span
+            className="font-bold"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            Energía sostenible
+          </motion.span>
           del futuro
-        </h1>
+        </motion.h1>
 
         <HeroCards className="absolute inset-x-0 top-1/2 w-full flex-col pb-12 lg:bottom-0 lg:top-auto lg:flex-row" />
       </div>
     </section>
   );
 };
+
 export default HomeHero;
