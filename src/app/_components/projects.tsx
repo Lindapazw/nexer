@@ -35,7 +35,7 @@ const PROJECTS = [
     description: "",
   },
   {
-    name: "PF Valdecabañas",
+    name: "PF Valdecabañas (en construcción)",
     image: "/images/valdecabañas.jpg",
     year: "2024",
     location: "Colmenar de Oreja (Madrid)",
@@ -45,7 +45,7 @@ const PROJECTS = [
   {
     name: "PF Vallejón",
     image: "/images/vallejon.jpg",
-    year: "2025",
+    year: "RtB 2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "5,6 MW",
     description:
