@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
 import Autoplay from "embla-carousel-autoplay";
+import { motion } from "framer-motion";
 import { ChartColumnBig, Handshake, Presentation } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
@@ -58,16 +59,28 @@ const HomeServices = () => {
 
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center">
-      <h2 className="h2">¿Por qué elegir Nexer?</h2>
+      <motion.h2
+        className="h2"
+        initial={{ opacity: 0, y: 70, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        ¿Por qué elegir Nexer?
+      </motion.h2>
 
-      <p className="p">
+      <motion.p
+        className="p"
+        initial={{ opacity: 0, y: 70, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+      >
         En Nexer, impulsamos la transición hacia un modelo energético sostenible
-        con soluciones personalizadas.
-      </p>
-      <p className="p">
+        con soluciones personalizadas. <br />
         Descubre cómo nuestro compromiso y experiencia pueden marcar la
         diferencia.
-      </p>
+      </motion.p>
 
       <Carousel
         className="w-full lg:mt-10 xl:px-36"
@@ -99,10 +112,24 @@ const HomeServices = () => {
         </CarouselContent>
       </Carousel>
 
-      <h2 className="h2 mt-5 lg:mt-20">Nuestros clientes</h2>
-      <p className="p">
+      <motion.h2
+        className="h2 mt-5 lg:mt-20"
+        initial={{ opacity: 0, y: 70, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Nuestros clientes
+      </motion.h2>
+      <motion.p
+        className="p"
+        initial={{ opacity: 0, y: 70, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+      >
         Colaboramos con empresas comprometidas con un futuro más sostenible
-      </p>
+      </motion.p>
 
       <Carousel
         className="container mx-auto w-full xl:mt-5"
