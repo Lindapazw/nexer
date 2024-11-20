@@ -27,7 +27,7 @@ const MEMBERS = [
   {
     name: "José Luis Galindo Iranzo",
     title: "Partner",
-    image: "/images/team_jose.png",
+    image: "/images/Jose.jpg",
     description: (
       <>
         <p>
@@ -66,7 +66,7 @@ const MEMBERS = [
   {
     name: "Manuel de Castro Zurita",
     title: "Partner",
-    image: "/images/team_manuel.png",
+    image: "/images/Manuel.jpg",
     description: (
       <>
         <p>
@@ -102,7 +102,7 @@ const MEMBERS = [
   {
     name: "Laura del Hierro Higuera",
     title: "Managing Director",
-    image: "/images/team_laura.png",
+    image: "/images/Laura.jpg",
     description: (
       <>
         <p>
