@@ -20,6 +20,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -152,11 +153,25 @@ const HomeTeam = () => {
       {/* Contenido */}
       <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
-          <h3 className="h2 text-center text-white md:mt-5">Nuestro equipo</h3>
+          <motion.h3
+            className="h2 text-center text-white md:mt-5"
+            initial={{ opacity: 0, y: 70, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            Nuestro equipo
+          </motion.h3>
 
-          <p className="p mb-4 text-white">
+          <motion.p
+            className="p mb-4 text-white"
+            initial={{ opacity: 0, y: 70, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          >
             Haz click en las imágenes para ver más
-          </p>
+          </motion.p>
 
           <Carousel
             className="container mx-auto mt-4 w-full px-6 md:mt-8 md:px-0 lg:mt-20 xl:px-36"
