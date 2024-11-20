@@ -112,6 +112,37 @@ const HomeHeader = () => {
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                  "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
+                    !isScreenScrolled,
+                })}
+                asChild
+              >
+                <Link href="#contact" aria-label="Ir a la sección de contacto">
+                  Contacto
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                  "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
+                    !isScreenScrolled,
+                })}
+                asChild
+              >
+                <Link
+                  href="#location"
+                  aria-label="Ir a la sección de ubicación"
+                >
+                  Ubicación
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 

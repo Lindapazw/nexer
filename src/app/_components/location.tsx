@@ -1,6 +1,6 @@
 const HomeLocation = () => {
   return (
-    <section className="relative min-h-[80vh]">
+    <section id="location" className="relative min-h-[80vh]">
       {/* imagen */}
       <div
         className="bg-attach-scroll md:bg-attach-fixed absolute inset-0 bg-cover bg-center"
