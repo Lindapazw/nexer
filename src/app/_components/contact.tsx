@@ -59,7 +59,7 @@ const HomeContact = () => {
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col items-center justify-center py-6 lg:flex-row lg:gap-20">
       <div id="contact" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
-      <div className="">
+      <div>
         <h2 className="h2">Cada paso cuenta</h2>
 
         <p className="p">Estás mas cerca de construir un futuro sostenible</p>
