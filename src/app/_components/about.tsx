@@ -13,7 +13,8 @@ const HomeAbout = () => {
       <div className="lg:order-2">
         <h3 className="h3">IMPULSANDO EL CAMBIO</h3>
         <h2 className="h2 xl:my-6">
-          Participa en la construcción de un modelo energético sostenible
+          Nos involucramos en la transición hacia un sistema energético
+          sostenible
         </h2>
         <div className="h-1 w-1/3 bg-accent"></div>
         <div className="mt-8">

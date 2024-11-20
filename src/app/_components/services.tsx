@@ -101,8 +101,7 @@ const HomeServices = () => {
 
       <h2 className="h2 mt-5 lg:mt-20">Nuestros clientes</h2>
       <p className="p">
-        Nos enorgullece colaborar con empresas comprometidas con un futuro más
-        sostenible.
+        Colaboramos con empresas comprometidas con un futuro más sostenible
       </p>
 
       <Carousel
