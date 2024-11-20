@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,58 +11,125 @@ const HomeAbout = () => {
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
       {/* Texto */}
+
       <div className="lg:order-2">
-        <h3 className="h3">IMPULSANDO EL CAMBIO</h3>
-        <h2 className="h2 xl:my-6">
+        <motion.h3
+          className="h3"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+        >
+          IMPULSANDO EL CAMBIO
+        </motion.h3>
+        <motion.h2
+          className="h2 xl:my-6"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           Nos involucramos en la transición hacia un sistema energético
           sostenible
-        </h2>
-        <div className="h-1 w-1/3 bg-accent"></div>
+        </motion.h2>
+        <motion.div
+          className="h-1 w-1/3 bg-accent"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        ></motion.div>
         <div className="mt-8">
-          <p className="p mb-4 lg:hidden">
+          <motion.p
+            className="p mb-4 lg:hidden"
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
             que hacen realidad la Transición Energética{" "}
-          </p>
+          </motion.p>
 
-          <p className="p hidden lg:block">
+          <motion.p
+            className="p hidden lg:block"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
             que hacen realidad la Transición Energética{" "}
-          </p>
-          <p className="p hidden lg:block">
+          </motion.p>
+          <motion.p
+            className="p hidden lg:block"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Disponemos de un carácter pionero y una predisposición a la
             innovación en todos los ámbitos del sector, creando valor para
             nuestros clientes a través de nuestra especialización y
             capacitación.
-          </p>
+          </motion.p>
 
           <ol className="p my-4 hidden flex-col gap-3 lg:flex xl:my-6">
-            <li className="span flex gap-2">
+            <motion.li
+              className="span flex gap-2"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <Check />
               <p>Expertos en proyectos energéticos</p>
-            </li>
-            <li className="span flex gap-2">
+            </motion.li>
+            <motion.li
+              className="span flex gap-2"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <Check />
               <p>Equipo interdisciplinario</p>
-            </li>
-            <li className="span flex gap-2">
+            </motion.li>
+            <motion.li
+              className="span flex gap-2"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <Check />
               <p>Soluciones sostenibles</p>
-            </li>
-            <li className="span flex gap-2">
+            </motion.li>
+            <motion.li
+              className="span flex gap-2"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <Check />
               <p>Multitecnología</p>
-            </li>
+            </motion.li>
           </ol>
         </div>
 
-        <button
+        <motion.button
           className="font-bold underline lg:hidden"
           onClick={() => setVisible((prev) => !prev)}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           Ver más
-        </button>
+        </motion.button>
 
         {visible && (
           <>
@@ -94,7 +162,13 @@ const HomeAbout = () => {
         )}
       </div>
 
-      <div className={cn("relative flex-grow", visible && "hidden lg:block")}>
+      <motion.div
+        className={cn("relative flex-grow", visible && "hidden lg:block")}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
         <Image
           src="/images/about_image.jpg"
           alt="about Nexer image"
@@ -103,7 +177,7 @@ const HomeAbout = () => {
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
         />
-      </div>
+      </motion.div>
 
       <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
