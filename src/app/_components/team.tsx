@@ -152,14 +152,14 @@ const HomeTeam = () => {
       {/* Contenido */}
       <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
-          <h2 className="h3 text-white">NUESTRO EQUIPO</h2>
+          <h3 className="h2 text-center text-white md:mt-5">Nuestro equipo</h3>
 
-          <h3 className="h2 text-center text-white md:mt-5">
-            Conoce a nuestros expertos
-          </h3>
+          <p className="p mb-4 text-white">
+            Haz click en las imágenes para ver más
+          </p>
 
           <Carousel
-            className="container mx-auto mt-0 w-full px-6 md:mt-8 md:px-0 lg:mt-20 xl:px-36"
+            className="container mx-auto mt-4 w-full px-6 md:mt-8 md:px-0 lg:mt-20 xl:px-36"
             opts={{ startIndex: 1, loop: true }}
             plugins={[autoplayPlugin.current]}
           >
