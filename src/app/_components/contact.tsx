@@ -67,7 +67,7 @@ const HomeContact = () => {
 
       <Form {...form}>
         <form
-          className="mt-8 flex flex-col gap-6 rounded-md border-2 border-gray-100 bg-white p-8 text-black shadow-xl"
+          className="mt-8 flex flex-col gap-6 rounded-md bg-accent p-8 text-white shadow-xl"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <h3 className="h3 mb-0 text-center">¿Hablamos?</h3>
