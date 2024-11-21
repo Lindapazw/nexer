@@ -46,7 +46,7 @@ const PROJECTS = [
   },
   {
     name: "PF Vallejón",
-    image: "/images/project_vallejon.jpg",
+    image: "/images/Vallejón.jpg",
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "5,6 MW",
@@ -119,7 +119,7 @@ const HomeProjects = () => {
             className="h2 text-center text-white md:mt-5"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Nuestros proyectos
@@ -129,10 +129,10 @@ const HomeProjects = () => {
             className="p mb-4 text-white"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           >
-            Haz click para conocer más de nuestros proyectos
+            Conoce más acerca de nuestros proyectos
           </motion.p>
 
           <Carousel
