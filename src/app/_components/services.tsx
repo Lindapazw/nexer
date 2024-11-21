@@ -63,7 +63,7 @@ const HomeServices = () => {
         className="h2"
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         ¿Por qué elegir Nexer?
@@ -73,7 +73,7 @@ const HomeServices = () => {
         className="p"
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
         En Nexer, impulsamos la transición hacia un modelo energético sostenible
@@ -116,7 +116,7 @@ const HomeServices = () => {
         className="h2 mt-5 lg:mt-20"
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         Nuestros clientes
@@ -125,7 +125,7 @@ const HomeServices = () => {
         className="p"
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
         Colaboramos con empresas comprometidas con un futuro más sostenible

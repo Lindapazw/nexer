@@ -26,17 +26,8 @@ const HomeAbout = () => {
       {/* Texto */}
 
       <div className="lg:order-2">
-        <motion.h3
-          className="h3"
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1.0, ease: "easeOut" }}
-        >
-          Impulsando el cambio
-        </motion.h3>
         <motion.h2
-          className="h2 xl:my-6"
+          className="h2 xl:mb-6"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -45,13 +36,6 @@ const HomeAbout = () => {
           Nos involucramos en la transición hacia un sistema energético
           sostenible
         </motion.h2>
-        <motion.div
-          className="h-1 w-1/3 bg-accent"
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        ></motion.div>
         <div className="mt-8">
           <motion.p
             className="p mb-4 lg:hidden"
