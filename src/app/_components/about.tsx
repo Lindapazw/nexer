@@ -5,8 +5,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  { src: "/images/about_image.png", alt: "About Nexer Image" },
   { src: "/images/about_image.jpg", alt: "Second Nexer Image" },
+  { src: "/images/project_hita_tardio.jpg", alt: "Proyecto hita tardío" },
+  { src: "/images/project_talega.jpg", alt: "Proyecto stalega" },
 ];
 
 const HomeAbout = () => {
@@ -16,8 +17,8 @@ const HomeAbout = () => {
   // Cambiar la imagen automáticamente
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+      setCurrentIndex((prevIndex) => (prevIndex + 2) % images.length);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 

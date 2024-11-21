@@ -157,7 +157,7 @@ const HomeTeam = () => {
             className="h2 text-center text-white md:mt-5"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Nuestro equipo
@@ -167,7 +167,7 @@ const HomeTeam = () => {
             className="p mb-4 text-white"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           >
             Haz click en las imágenes para ver más
