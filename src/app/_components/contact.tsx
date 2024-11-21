@@ -1,34 +1,33 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderCircle } from "lucide-react";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
 import { z } from "zod";
 import { sendContactInfo } from "../actions/send-contact-info";
 
 export const contactSchema = z.object({
-  name: z.string().min(3, { message: "Campo obligatorio." }),
-  company: z.string().min(3, { message: "Campo obligatorio." }),
+  name: z.string().min(1, { message: "Campo obligatorio." }),
+  company: z.string().min(1, { message: "Campo obligatorio." }),
   email: z.string().email({ message: "Formato de correo inválido." }),
-  message: z.string().min(10, { message: "Campo obligatorio." }),
-  privacyAgreement: z.literal<boolean>(true),
+  message: z.string().min(1, { message: "Campo obligatorio." }),
+  // privacyAgreement: z.literal<boolean>(true),
 });
 
 const HomeContact = () => {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -36,7 +35,7 @@ const HomeContact = () => {
       company: "",
       email: "",
       message: "",
-      privacyAgreement: false,
+      // privacyAgreement: false,
     },
   });
 
@@ -45,14 +44,25 @@ const HomeContact = () => {
       await sendContactInfo(data);
 
       form.reset();
-      toast.success("¡Gracias por tu mensaje!", {
+      toast({
+        title: "¡Gracias por tu mensaje!",
         description: "Nos pondremos en contacto con usted lo antes posible.",
+        variant: "success",
       });
     } catch {
-      toast.error("Ha ocurrido un error al enviar el mensaje.", {
+      toast({
+        title: "Ha ocurrido un error al enviar el mensaje.",
         description: "Por favor, inténtalo de nuevo más tarde.",
+        variant: "destructive",
       });
     }
+  };
+
+  const onSubmitInvalid = () => {
+    toast({
+      title: "Por favor, completa todos los campos.",
+      variant: "destructive",
+    });
   };
 
   return (
@@ -60,31 +70,35 @@ const HomeContact = () => {
       <div id="contact" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
       <div>
-        <h2 className="h2">Cada paso cuenta</h2>
+        <h2 className="h2 text-center lg:text-start">Cada paso cuenta</h2>
 
-        <p className="p">Estás mas cerca de construir un futuro sostenible</p>
+        <p className="p text-center lg:text-start">
+          Estás mas cerca de construir un futuro sostenible
+        </p>
       </div>
 
       <Form {...form}>
         <form
-          className="mt-8 flex flex-col gap-6 rounded-md bg-accent p-8 text-white shadow-xl"
-          onSubmit={form.handleSubmit(onSubmit)}
+          className="mt-8 flex w-full max-w-[32rem] flex-col gap-6 rounded-md bg-accent p-8 text-white shadow-xl lg:w-[32rem]"
+          onSubmit={form.handleSubmit(onSubmit, onSubmitInvalid)}
         >
           <h3 className="h3 mb-0 text-center">¿Hablamos?</h3>
 
           <FormField
             control={form.control}
             name="name"
-            render={({ field }) => (
+            render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">Nombre:</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
-                    className="rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg"
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      fieldState.error && "border-destructive",
+                    )}
                   />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -92,7 +106,7 @@ const HomeContact = () => {
           <FormField
             control={form.control}
             name="company"
-            render={({ field }) => (
+            render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">
                   Empresa:
@@ -100,10 +114,12 @@ const HomeContact = () => {
                 <FormControl>
                   <Input
                     {...field}
-                    className="rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg"
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      fieldState.error && "border-destructive",
+                    )}
                   />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -111,16 +127,18 @@ const HomeContact = () => {
           <FormField
             control={form.control}
             name="email"
-            render={({ field }) => (
+            render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">Email:</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
-                    className="rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg"
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      fieldState.error && "border-destructive",
+                    )}
                   />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -128,7 +146,7 @@ const HomeContact = () => {
           <FormField
             control={form.control}
             name="message"
-            render={({ field }) => (
+            render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">
                   Mensaje:
@@ -136,15 +154,17 @@ const HomeContact = () => {
                 <FormControl>
                   <Textarea
                     {...field}
-                    className="rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg"
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      fieldState.error && "border-destructive",
+                    )}
                     rows={4}
                   />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
-
+          {/* 
           <FormField
             control={form.control}
             name="privacyAgreement"
@@ -170,7 +190,7 @@ const HomeContact = () => {
                 </FormLabel>
               </FormItem>
             )}
-          />
+          /> */}
 
           <Button
             aria-labelledby="botón de enviar email"

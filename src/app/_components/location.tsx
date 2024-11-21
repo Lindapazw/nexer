@@ -23,17 +23,17 @@ const HomeLocation = () => {
       />
 
       {/* contenido */}
-      <div className="flex">
-        <div className="relative flex h-[80vh] w-[50vw] flex-col justify-center lg:pl-20">
-          <h3 className="h2 text-start text-white md:mt-5">Nuestra oficina</h3>
+      <div className="container mx-auto flex flex-col lg:flex-row lg:gap-16">
+        <div className="relative flex h-full w-full flex-col justify-center lg:h-[80vh] lg:w-[60vw]">
+          <h3 className="h2 mt-6 text-start text-white">Nuestra oficina</h3>
 
-          <p className="p mb-10 pr-10 text-white">
+          <p className="p mb-6 text-white lg:mb-10">
             Nexer se especializa en energías renovables y proyectos de
             transición energética. Contáctanos para saber más sobre nuestros
             servicios y cómo podemos ayudarte a impulsar un futuro sostenible.
           </p>
 
-          <ol className="p flex flex-col gap-10 text-white">
+          <ol className="p flex flex-col gap-4 text-white lg:gap-10">
             <li className="span flex items-center gap-2">
               <Location className="h-5 w-5" />
               <p>Avenida de Bruselas, 3. 28108 Alcobendas, Madrid, España</p>
@@ -52,8 +52,11 @@ const HomeLocation = () => {
             </li>
           </ol>
         </div>
-        <div className="relative h-[80vh] w-[50vw]">
-          <MapWithNoSSR />
+
+        <div className="relative h-96 w-full py-6 lg:h-[80vh] lg:w-[40vw] lg:py-16">
+          <div className="h-full overflow-hidden rounded-xl">
+            <MapWithNoSSR />
+          </div>
         </div>
       </div>
     </section>
