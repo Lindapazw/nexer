@@ -1,7 +1,14 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Hour from "./_icons.tsx/hour";
 import Location from "./_icons.tsx/location";
 import Mail from "./_icons.tsx/mail";
 import Phone from "./_icons.tsx/phone";
+
+const MapWithNoSSR = dynamic(() => import("../_components/map"), {
+  ssr: false,
+});
 
 const HomeLocation = () => {
   return (
@@ -16,7 +23,6 @@ const HomeLocation = () => {
       />
 
       {/* contenido */}
-
       <div className="flex">
         <div className="relative flex h-[80vh] w-[50vw] flex-col justify-center lg:pl-20">
           <h3 className="h2 text-start text-white md:mt-5">Nuestra oficina</h3>
@@ -46,8 +52,8 @@ const HomeLocation = () => {
             </li>
           </ol>
         </div>
-        <div className="relative h-[80vh] w-[50vw] bg-red-600">
-          {/* mapa aquí */}
+        <div className="relative h-[80vh] w-[50vw]">
+          <MapWithNoSSR />
         </div>
       </div>
     </section>
