@@ -1,12 +1,25 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const images = [
+  { src: "/images/about_image.png", alt: "About Nexer Image" },
+  { src: "/images/about_image.jpg", alt: "Second Nexer Image" },
+];
 
 const HomeAbout = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
+
+  // Cambiar la imagen automáticamente
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
@@ -17,16 +30,16 @@ const HomeAbout = () => {
           className="h3"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
         >
-          IMPULSANDO EL CAMBIO
+          Impulsando el cambio
         </motion.h3>
         <motion.h2
           className="h2 xl:my-6"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           Nos involucramos en la transición hacia un sistema energético
@@ -36,7 +49,7 @@ const HomeAbout = () => {
           className="h-1 w-1/3 bg-accent"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         ></motion.div>
         <div className="mt-8">
@@ -44,7 +57,7 @@ const HomeAbout = () => {
             className="p mb-4 lg:hidden"
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Somos una firma independiente especializada en la identificación y
@@ -56,7 +69,7 @@ const HomeAbout = () => {
             className="p hidden lg:block"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Somos una firma independiente especializada en la identificación y
@@ -67,7 +80,7 @@ const HomeAbout = () => {
             className="p hidden lg:block"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Disponemos de un carácter pionero y una predisposición a la
@@ -81,7 +94,7 @@ const HomeAbout = () => {
               className="span flex gap-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Check />
@@ -91,7 +104,7 @@ const HomeAbout = () => {
               className="span flex gap-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Check />
@@ -101,7 +114,7 @@ const HomeAbout = () => {
               className="span flex gap-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Check />
@@ -111,7 +124,7 @@ const HomeAbout = () => {
               className="span flex gap-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Check />
@@ -121,11 +134,11 @@ const HomeAbout = () => {
         </div>
 
         <motion.button
-          className="font-bold underline lg:hidden"
+          className="mb-4 font-bold underline lg:hidden"
           onClick={() => setVisible((prev) => !prev)}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           Ver más
@@ -162,23 +175,34 @@ const HomeAbout = () => {
         )}
       </div>
 
-      <motion.div
-        className={cn("relative flex-grow", visible && "hidden lg:block")}
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
-        <Image
-          src="/images/about_image.png"
-          alt="about Nexer image"
-          fill
-          className="absolute w-full rounded-xl object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
-        />
-      </motion.div>
-
+      {/* Carrusel */}
+      <div className="relative w-full">
+        <div className="relative min-h-[50vh] w-full overflow-hidden">
+          <AnimatePresence>
+            {images.map(
+              (image, index) =>
+                index === currentIndex && (
+                  <motion.div
+                    key={image.src}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="absolute inset-0 rounded-md object-cover"
+                      sizes="100vw"
+                    />
+                  </motion.div>
+                ),
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
       <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
