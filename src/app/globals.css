@@ -79,7 +79,7 @@ body {
     @apply mb-6 text-3xl font-normal lg:text-4xl xl:text-5xl;
   }
   .h3 {
-    @apply mb-4 text-sm font-semibold lg:text-xl;
+    @apply mb-4 text-lg font-semibold lg:text-2xl;
   }
   .description {
     @apply text-base xl:text-xl xl:leading-8;
