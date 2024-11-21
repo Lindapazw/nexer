@@ -170,7 +170,7 @@ const HomeAbout = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
       >
         <Image
-          src="/images/about_image.jpg"
+          src="/images/about_image.png"
           alt="about Nexer image"
           fill
           className="absolute w-full rounded-xl object-cover"
