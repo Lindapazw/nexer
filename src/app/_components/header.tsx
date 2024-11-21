@@ -121,20 +121,6 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#contact" aria-label="Ir a la sección de contacto">
-                  Contacto
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
-                  "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
-                    !isScreenScrolled,
-                })}
-                asChild
-              >
                 <Link
                   href="#location"
                   aria-label="Ir a la sección de ubicación"
@@ -209,6 +195,22 @@ const HomeHeader = () => {
               onClick={() => setOpen(false)}
             >
               Proyectos
+            </Link>
+            <Link
+              aria-label="Ir a la sección de contacto"
+              href="#contact"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Contacto
+            </Link>
+            <Link
+              aria-label="Ir a la sección de ubicación"
+              href="#location"
+              className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
+              onClick={() => setOpen(false)}
+            >
+              Ubicación
             </Link>
 
             <DrawerFooter className="pt-2">

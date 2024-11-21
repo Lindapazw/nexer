@@ -1,4 +1,4 @@
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
 import "locomotive-scroll/dist/locomotive-scroll.css";
