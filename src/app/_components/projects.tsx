@@ -46,7 +46,7 @@ const PROJECTS = [
   },
   {
     name: "PF Vallejón",
-    image: "/images/Vallejón.jpg",
+    image: "/images/project_vallejon.jpg",
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "5,6 MW",

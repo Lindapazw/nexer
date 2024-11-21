@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const images = [
   { src: "/images/about_image.jpg", alt: "Second Nexer Image" },
   { src: "/images/project_hita_tardio.jpg", alt: "Proyecto hita tardío" },
-  { src: "/images/project_talega.jpg", alt: "Proyecto stalega" },
+  { src: "/images/project_talega.jpg", alt: "Proyecto talega" },
 ];
 
 const HomeAbout = () => {

@@ -46,7 +46,9 @@ const HomeLocation = () => {
             </li>
           </ol>
         </div>
-        <div className="relative h-[80vh] w-[50vw]">{/* mapa aquí */}</div>
+        <div className="relative h-[80vh] w-[50vw] bg-red-600">
+          {/* mapa aquí */}
+        </div>
       </div>
     </section>
   );
