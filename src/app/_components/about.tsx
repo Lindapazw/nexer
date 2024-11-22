@@ -14,7 +14,6 @@ const HomeAbout = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
 
-  // Cambiar la imagen automáticamente
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 2) % images.length);
