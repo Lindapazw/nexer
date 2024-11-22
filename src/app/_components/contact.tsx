@@ -94,7 +94,7 @@ const HomeContact = () => {
                   <Input
                     {...field}
                     className={cn(
-                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
                       fieldState.error && "border-destructive",
                     )}
                   />
@@ -115,7 +115,7 @@ const HomeContact = () => {
                   <Input
                     {...field}
                     className={cn(
-                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
                       fieldState.error && "border-destructive",
                     )}
                   />
@@ -134,7 +134,7 @@ const HomeContact = () => {
                   <Input
                     {...field}
                     className={cn(
-                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
                       fieldState.error && "border-destructive",
                     )}
                   />
@@ -155,7 +155,7 @@ const HomeContact = () => {
                   <Textarea
                     {...field}
                     className={cn(
-                      "rounded-sm border-x-0 border-b-2 border-t-0 border-white bg-accent-light text-lg",
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
                       fieldState.error && "border-destructive",
                     )}
                     rows={4}
