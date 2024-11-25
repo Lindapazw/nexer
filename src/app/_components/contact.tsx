@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderCircle } from "lucide-react";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { sendContactInfo } from "../actions/send-contact-info";
@@ -69,12 +70,32 @@ const HomeContact = () => {
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col items-center justify-center py-6 lg:flex-row lg:gap-20">
       <div id="contact" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
-      <div>
-        <h2 className="h2 text-center lg:text-start">Cada paso cuenta</h2>
+      <div className="flex flex-col justify-center gap-2 lg:gap-4">
+        <h2 className="h2 text-center lg:hidden lg:text-start">
+          Cada paso cuenta
+        </h2>
 
-        <p className="p text-center lg:text-start">
+        <p className="p text-center lg:hidden lg:text-start">
           Estás mas cerca de construir un futuro sostenible
         </p>
+
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="mt-6 hidden h-full w-full max-w-96 lg:block"
+        >
+          <source src="/videos/contact_video.mp4" type="video/mp4" />
+          <Image
+            src="/images/about_image.jpg"
+            alt="hero video"
+            fill
+            className="h-full w-full"
+            priority
+            sizes="50vw"
+          />
+        </video>
       </div>
 
       <Form {...form}>
