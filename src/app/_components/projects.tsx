@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -162,6 +163,10 @@ const HomeProjects = () => {
                           <span className="text-xs md:text-lg">
                             {project.power}
                           </span>
+                        </div>
+
+                        <div className="absolute right-2 top-2 flex items-center justify-center rounded-full bg-white p-2">
+                          <Search />
                         </div>
                       </div>
                     </CarouselItem>
