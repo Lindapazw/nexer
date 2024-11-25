@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "Descubre las soluciones de energía sustentable de Nexer, diseñadas para ayudar a empresas y hogares a reducir su impacto ambiental.",
     type: "website",
-    url: "https://tusitio.com", // Reemplaza con tu URL real
+    url: "https://nexer.es",
     images: [
       {
         url: neosol.src,
