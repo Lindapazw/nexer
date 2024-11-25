@@ -1,26 +1,11 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-
-const images = [
-  { src: "/images/about_image.jpg", alt: "Second Nexer Image" },
-  { src: "/images/project_hita_tardio.jpg", alt: "Proyecto hita tardío" },
-  { src: "/images/project_talega.jpg", alt: "Proyecto talega" },
-];
+import { useState } from "react";
 
 const HomeAbout = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
-
-  // Cambiar la imagen automáticamente
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 2) % images.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
@@ -163,29 +148,13 @@ const HomeAbout = () => {
       {/* Carrusel */}
       <div className="relative w-full">
         <div className="relative min-h-[50vh] w-full overflow-hidden">
-          <AnimatePresence>
-            {images.map(
-              (image, index) =>
-                index === currentIndex && (
-                  <motion.div
-                    key={image.src}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="absolute inset-0 rounded-md object-cover"
-                      sizes="100vw"
-                    />
-                  </motion.div>
-                ),
-            )}
-          </AnimatePresence>
+          <Image
+            src="/images/project_neosol.jpg"
+            alt="Proyecto Neosol"
+            fill
+            className="absolute inset-0 rounded-md object-cover"
+            sizes="100vw"
+          />
         </div>
       </div>
       <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>

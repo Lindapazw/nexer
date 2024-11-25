@@ -55,7 +55,7 @@ const PROJECTS = [
   },
   {
     name: "PF Calera",
-    image: "/images/project_calera.jpg",
+    image: "/images/project_vallejon.jpg",
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "6,5 MW",
