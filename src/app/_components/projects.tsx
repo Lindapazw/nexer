@@ -38,7 +38,7 @@ const PROJECTS = [
     description: "",
   },
   {
-    name: "PF Valdecabañas (en construcción)",
+    name: "PF Valdecabañas - En prog.",
     image: "/images/valdecabañas.jpg",
     year: "2024",
     location: "Colmenar de Oreja (Madrid)",
@@ -46,7 +46,7 @@ const PROJECTS = [
     description: "RtB Mayo 2024 – Próximo inicio de la construcción",
   },
   {
-    name: "PF Vallejón",
+    name: "PF Vallejón (RtB)",
     image: "/images/project_vallejon.jpg",
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
@@ -55,7 +55,7 @@ const PROJECTS = [
       "La imagen corresponde a una simulación hiperrealista del estudio de integración paisajística. Previsión inicio construcción: 2025.",
   },
   {
-    name: "PF Calera",
+    name: "PF Calera (RtB)",
     image: "/images/project_vallejon.jpg",
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
