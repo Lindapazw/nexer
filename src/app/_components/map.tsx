@@ -8,7 +8,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 
-const position = new LatLng(40.530760116329986, -3.6298969179997465);
+const position = new LatLng(40.5298525618877, -3.6407526172635354);
 const Map = () => {
   return (
     <MapContainer

@@ -95,7 +95,7 @@ const HomeServices = () => {
             >
               <Card className="h-full max-w-80 bg-accent text-white lg:max-w-96">
                 <CardHeader className="relative">
-                  <div className="absolute -top-8 left-1/2 z-10 max-w-min -translate-x-1/2 rounded-full bg-accent-light p-4 text-white">
+                  <div className="absolute -top-8 left-1/2 z-10 max-w-min -translate-x-1/2 rounded-full bg-[#7A8D82] p-4 text-white">
                     {service.icon}
                   </div>
 
