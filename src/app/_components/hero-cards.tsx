@@ -30,7 +30,8 @@ const HeroCards = ({ className, ...props }: HTMLMotionProps<"div">) => {
 
           <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
             <p className="text-4xl font-bold text-white lg:text-4xl">
-              <CountUp start={0} end={500} duration={2} delay={0} /> MW
+              <CountUp start={0} end={500} duration={2} delay={0} />
+              MW
             </p>
 
             <p className="text-white lg:text-lg">Proyectos desarrollados</p>
@@ -38,7 +39,8 @@ const HeroCards = ({ className, ...props }: HTMLMotionProps<"div">) => {
 
           <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
             <p className="text-4xl font-bold text-white lg:text-4xl">
-              <CountUp start={0} end={600} duration={2} delay={0} /> MW
+              <CountUp start={0} end={600} duration={2} delay={0} />
+              MW
             </p>
 
             <p className="text-white lg:text-lg">Proyectos en desarrollo</p>
@@ -52,7 +54,8 @@ const HeroCards = ({ className, ...props }: HTMLMotionProps<"div">) => {
           </div>
           <div className="hidden flex-col items-center justify-center gap-2 lg:flex lg:gap-4">
             <p className="text-4xl font-bold text-white lg:text-4xl">
-              <CountUp start={0} end={216.45} duration={2} delay={0} /> ton
+              <CountUp start={0} end={216.45} duration={2} delay={0} />
+              ton
             </p>
 
             <p className="text-white lg:text-2xl">CO2/año evitadas</p>

@@ -37,7 +37,7 @@ const config: Config = {
           DEFAULT: "#42685A",
           foreground: "hsl(var(--accent-foreground))",
           hover: "#2A5142",
-          light: "#7A8D82",
+          light: "#FFFFFF",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

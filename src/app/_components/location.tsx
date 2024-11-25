@@ -36,7 +36,7 @@ const HomeLocation = () => {
           <ol className="p flex flex-col gap-4 text-white lg:gap-10">
             <li className="span flex items-center gap-2">
               <Location className="h-5 w-5" />
-              <p>Avenida de Bruselas, 3. 28108 Alcobendas, Madrid, España</p>
+              <p>Avenida de Bruselas, 31. 28108 Alcobendas, Madrid, España</p>
             </li>
             <li className="span flex items-center gap-2">
               <Hour className="h-5 w-5" />
