@@ -8,7 +8,7 @@ const HomeAbout = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
+    <section className="container relative mx-auto flex items-center justify-center min-h-[calc(100vh-3.25rem)] w-full flex-col py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
       {/* Texto */}
 
       <div className="lg:order-2">
