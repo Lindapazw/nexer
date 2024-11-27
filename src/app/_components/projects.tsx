@@ -51,7 +51,7 @@ const PROJECTS = [
     location: "Cabanillas de la Sierra (Madrid)",
     power: "5,6 MW",
     description:
-      "La imagen corresponde a una simulación hiperrealista del estudio de integración paisajística. Previsión inicio construcción: 2025.",
+      "Previsión inicio construcción: 2025.",
   },
   {
     name: "PF Calera (RtB)",
@@ -60,7 +60,7 @@ const PROJECTS = [
     location: "Cabanillas de la Sierra (Madrid)",
     power: "6,5 MW",
     description:
-      "La imagen corresponde a una simulación hiperrealista del estudio de integración paisajística. Previsión inicio construcción: 2025.",
+      "Previsión inicio construcción: 2025.",
   },
   {
     name: "PF Valdesolar",
