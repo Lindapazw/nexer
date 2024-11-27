@@ -21,14 +21,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+
 export const metadata: Metadata = {
   title: "Nexer - Soluciones de Energía Sostenible",
   description:
-    "Nexer es líder en proporcionar soluciones de energía sostenible, ofreciendo tecnologías innovadoras para empresas y hogares que buscan reducir su huella de carbono. Con un enfoque en la eficiencia energética y la sostenibilidad, Nexer ayuda a transformar el consumo de energía a través de paneles solares, sistemas de almacenamiento de energía, y consultoría especializada para maximizar el uso de recursos renovables.",
+    "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
   openGraph: {
     title: "Nexer - Soluciones de Energía Sostenible",
     description:
-      "Descubre las soluciones de energía sostenible de Nexer, diseñadas para ayudar a empresas y hogares a reducir su impacto ambiental.",
+      "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
     type: "website",
     url: "https://nexer.es",
     images: [
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nexer - Soluciones de Energía Sostenible",
     description:
-      "Únete a Nexer para hacer el mundo más verde con soluciones energéticas innovadoras.",
+      "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
     images: [neosol.src, hita_tardio.src],
   },
   robots: {
