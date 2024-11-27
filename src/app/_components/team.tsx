@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -181,7 +182,11 @@ const HomeTeam = () => {
                           className="absolute inset-0 object-cover object-center"
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
+                        
                       </div>
+                      <div className="absolute right-2 top-2 flex items-center justify-center rounded-full bg-white p-2">
+                          <Search />
+                        </div>
 
                       <Card className="absolute inset-x-8 bottom-0 ml-6">
                         <CardHeader className="px-4 py-2 md:px-8 md:py-4">
