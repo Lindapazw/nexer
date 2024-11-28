@@ -66,7 +66,7 @@ const HomeServices = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        En Nexer, impulsamos la transición… 
+        En Nexer, impulsamos la transición
       </motion.h2>
 
       <motion.p

@@ -87,12 +87,12 @@ const PROJECTS = [
     description: "",
   },
   {
-    name: "PF Neosol",
+    name: "Planta Fotovoltaica Neosol",
     image: "/images/project_neosol.jpg",
     year: "2024",
     location: "Villanueva del Pardillo (Madrid)",
     power: "10 MW",
-    description: "Primera planta",
+    description: "Planta Fotovoltaica Neosol",
   },
 ];
 

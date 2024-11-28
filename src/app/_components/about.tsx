@@ -145,18 +145,30 @@ const HomeAbout = () => {
         )}
       </div>
 
-      {/* Carrusel */}
       <div className="relative w-full">
-        <div className="relative min-h-[50vh] w-full overflow-hidden">
-          <Image
-            src="/images/project_neosol.jpg"
-            alt="Proyecto Neosol"
-            fill
-            className="absolute inset-0 rounded-md object-cover"
-            sizes="100vw"
-          />
-        </div>
+  <div className="relative min-h-[50vh] w-full overflow-hidden group">
+    <div className="absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
+      <Image
+        src="/images/project_neosol.jpg"
+        alt="Proyecto Neosol"
+        fill
+        className="absolute inset-0 rounded-md object-cover"
+        sizes="100vw"
+      />
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-100 flex items-end p-4">
+      <div className="text-white">
+        <h3 className="text-xl font-bold">Planta Fotovoltaica Neosol</h3>
+        <p className="text-lg opacity-80">
+          Ubicación: Villanueva del Pardillo (Madrid)
+        </p>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
       <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
   );
