@@ -28,7 +28,7 @@ export async function sendContactInfo(data: z.infer<typeof contactSchema>) {
                 ${data.company && `<li><strong>Empresa:</strong> ${data.company}</li>`}
                 <li><strong>Email:</strong> ${data.email}</li>
                 <li><strong>Mensaje:</strong> ${data.message}</li>
-                <li><strong>Teléfono:</strong> ${data.phoneNumber}</li>
+                ${data.phoneNumber && `<li><strong>Teléfono:</strong> ${data.phoneNumber}</li>`}
             </ul>
         </body>
     `,

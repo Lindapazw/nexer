@@ -26,7 +26,7 @@ export const contactSchema = z.object({
   company: z.string().optional(),
   email: z.string().email({ message: "Formato de correo inválido." }),
   message: z.string().min(1, { message: "Campo obligatorio." }),
-  phoneNumber: phone(z.string(), "Teléfono inválido."),
+  phoneNumber: phone(z.string(), "Teléfono inválido.").optional(),
   // privacyAgreement: z.literal<boolean>(true),
 });
 
@@ -198,7 +198,7 @@ const HomeContact = () => {
             render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">
-                  Teléfono*:
+                  Teléfono:
                 </FormLabel>
                 <FormControl>
                   <Input
