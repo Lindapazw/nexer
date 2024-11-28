@@ -169,6 +169,30 @@ const HomeContact = () => {
               </FormItem>
             )}
           />
+          
+          <FormField
+            control={form.control}
+            name="phoneNumber"
+            render={({ field, fieldState }) => (
+              <FormItem>
+                <FormLabel className="text-base font-medium">
+                  Teléfono:
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
+                      fieldState.error && "border-destructive",
+                    )}
+                  />
+                </FormControl>
+                <FormMessage className="text-white" />
+              </FormItem>
+            )}
+          />
+
+
 
           <FormField
             control={form.control}
@@ -188,28 +212,6 @@ const HomeContact = () => {
                     rows={4}
                   />
                 </FormControl>
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="phoneNumber"
-            render={({ field, fieldState }) => (
-              <FormItem>
-                <FormLabel className="text-base font-medium">
-                  Teléfono:
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    className={cn(
-                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
-                      fieldState.error && "border-destructive",
-                    )}
-                  />
-                </FormControl>
-                <FormMessage className="text-white" />
               </FormItem>
             )}
           />
