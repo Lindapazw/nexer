@@ -25,9 +25,10 @@ export async function sendContactInfo(data: z.infer<typeof contactSchema>) {
             <p>Has recibido un nuevo mensaje a través del formulario de contacto:</p>
             <ul>
                 <li><strong>Nombre:</strong> ${data.name}</li>
-                <li><strong>Empresa:</strong> ${data.company}</li>
+                ${data.company && `<li><strong>Empresa:</strong> ${data.company}</li>`}
                 <li><strong>Email:</strong> ${data.email}</li>
                 <li><strong>Mensaje:</strong> ${data.message}</li>
+                <li><strong>Teléfono:</strong> ${data.phoneNumber}</li>
             </ul>
         </body>
     `,
