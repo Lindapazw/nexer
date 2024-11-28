@@ -7,11 +7,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { phone } from "@/lib/validators";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderCircle } from "lucide-react";
 import Image from "next/image";
@@ -21,9 +23,10 @@ import { sendContactInfo } from "../actions/send-contact-info";
 
 export const contactSchema = z.object({
   name: z.string().min(1, { message: "Campo obligatorio." }),
-  company: z.string().min(1, { message: "Campo obligatorio." }),
+  company: z.string().optional(),
   email: z.string().email({ message: "Formato de correo inválido." }),
   message: z.string().min(1, { message: "Campo obligatorio." }),
+  phoneNumber: phone(z.string(), "Teléfono inválido."),
   // privacyAgreement: z.literal<boolean>(true),
 });
 
@@ -36,6 +39,7 @@ const HomeContact = () => {
       company: "",
       email: "",
       message: "",
+      phoneNumber: "",
       // privacyAgreement: false,
     },
   });
@@ -61,7 +65,7 @@ const HomeContact = () => {
 
   const onSubmitInvalid = () => {
     toast({
-      title: "Por favor, completa todos los campos.",
+      title: `Por favor, completa los campos marcados.`,
       variant: "destructive",
     });
   };
@@ -110,7 +114,9 @@ const HomeContact = () => {
             name="name"
             render={({ field, fieldState }) => (
               <FormItem>
-                <FormLabel className="text-base font-medium">Nombre:</FormLabel>
+                <FormLabel className="text-base font-medium">
+                  Nombre*:
+                </FormLabel>
                 <FormControl>
                   <Input
                     {...field}
@@ -150,7 +156,7 @@ const HomeContact = () => {
             name="email"
             render={({ field, fieldState }) => (
               <FormItem>
-                <FormLabel className="text-base font-medium">Email:</FormLabel>
+                <FormLabel className="text-base font-medium">Email*:</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
@@ -170,7 +176,7 @@ const HomeContact = () => {
             render={({ field, fieldState }) => (
               <FormItem>
                 <FormLabel className="text-base font-medium">
-                  Mensaje:
+                  Mensaje*:
                 </FormLabel>
                 <FormControl>
                   <Textarea
@@ -185,6 +191,29 @@ const HomeContact = () => {
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="phoneNumber"
+            render={({ field, fieldState }) => (
+              <FormItem>
+                <FormLabel className="text-base font-medium">
+                  Teléfono*:
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    className={cn(
+                      "rounded-sm border-x-0 border-b-4 border-t-0 border-white bg-accent-light text-lg text-black",
+                      fieldState.error && "border-destructive",
+                    )}
+                  />
+                </FormControl>
+                <FormMessage className="text-white" />
+              </FormItem>
+            )}
+          />
+
           {/* 
           <FormField
             control={form.control}
