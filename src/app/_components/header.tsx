@@ -49,11 +49,11 @@ const HomeHeader = () => {
           />
         </Link>
 
-        <NavigationMenu className="hidden max-w-full grow justify-start lg:flex">
+        <NavigationMenu className="hidden max-w-full grow justify-center lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -67,7 +67,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -81,7 +81,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -98,7 +98,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -115,7 +115,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
