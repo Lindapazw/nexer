@@ -103,20 +103,12 @@ const HomeProjects = () => {
 
   return (
     <section className="relative min-h-[calc(100vh-3.25rem)]">
-      {/* imagen */}
-      <div
-        className="bg-attach-scroll md:bg-attach-fixed absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/project_hita_tardio.jpg")',
-        }}
-      />
 
       {/* Contenido */}
       <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
           <motion.h3
-            className="h2 text-center text-white md:mt-5"
+            className="h2 text-center text-black md:mt-5"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -126,7 +118,7 @@ const HomeProjects = () => {
           </motion.h3>
 
           <motion.p
-            className="p mb-4 text-white"
+            className="p mb-4 text-black"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -144,8 +136,8 @@ const HomeProjects = () => {
               {PROJECTS.map((project) => (
                 <Dialog key={project.name}>
                   <DialogTrigger asChild>
-                    <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
-                      <div className="relative aspect-[3/4] w-full">
+                    <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3  ">
+                      <div className="relative aspect-[3/4] w-full ">
                         <Image
                           src={project.image}
                           alt={`${project.name} image`}
@@ -154,10 +146,10 @@ const HomeProjects = () => {
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
 
-                        <div className="span absolute inset-x-0 bottom-0 flex h-12 items-center bg-white pl-24 text-xs md:h-16 md:pl-32 md:text-lg">
+                        <div className="span absolute inset-x-0 bottom-0 flex h-12 items-center bg-white pl-24 text-xs md:h-16 md:pl-32 md:text-lg border-b-2">
                           {project.name}
                         </div>
-                        <div className="absolute bottom-0 left-4 flex aspect-square w-16 flex-col items-center justify-center bg-accent text-sm font-medium text-white md:w-24 md:text-2xl">
+                        <div className="absolute bottom-0 left-4 flex aspect-square w-16 flex-col items-center justify-center bg-accent text-sm font-medium text-white md:w-24 md:text-2xl ">
                           <span className="">{project.year}</span>
                           <span className="text-xs md:text-lg">
                             {project.power}
