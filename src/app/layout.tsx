@@ -21,7 +21,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
 export const metadata: Metadata = {
   title: "Nexer - Soluciones de Energía Sostenible",
   description:
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "energía sustentable",
+    "energía sostenible",
     "soluciones de energía",
     "paneles solares",
     "eficiencia energética",
