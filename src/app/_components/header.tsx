@@ -122,7 +122,7 @@ const HomeHeader = () => {
                 asChild
               >
                 <Link
-                  href="#location"
+                  href="#contact"
                   aria-label="Ir a la sección de ubicación"
                 >
                   Ubicación
