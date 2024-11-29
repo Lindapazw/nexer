@@ -35,7 +35,7 @@ const HomeHeader = () => {
         "fixed top-0 z-20 mx-auto w-full transition-all duration-300",
         {
           "bg-white py-2": isScreenScrolled,
-          "bg-black/25 py-4": !isScreenScrolled,
+          "bg-black/40 py-4": !isScreenScrolled,
         },
       )}
     >

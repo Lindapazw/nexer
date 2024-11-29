@@ -58,7 +58,7 @@ const HomeServices = () => {
   );
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center">
+    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col justify-center py-6 text-center ">
       <motion.h2
         className="h2"
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
@@ -78,8 +78,6 @@ const HomeServices = () => {
       >
         En Nexer, impulsamos la transición hacia un modelo energético sostenible
         con soluciones personalizadas. <br />
-        Descubre cómo nuestro compromiso y experiencia pueden marcar la
-        diferencia.
       </motion.p>
 
       <Carousel
@@ -93,13 +91,13 @@ const HomeServices = () => {
               key={service.name}
               className="relative mt-10 flex basis-full justify-center pl-6 md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="h-full max-w-80 bg-accent text-white lg:max-w-96">
+              <Card className="h-60 max-w-80 bg-accent text-white lg:max-w-96">
                 <CardHeader className="relative">
                   <div className="absolute -top-8 left-1/2 z-10 max-w-min -translate-x-1/2 rounded-full bg-[#7A8D82] p-4 text-white">
                     {service.icon}
                   </div>
 
-                  <CardTitle className="px-10 pt-2 text-xl">
+                  <CardTitle className=" pt-2 text-lg">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
@@ -113,7 +111,7 @@ const HomeServices = () => {
       </Carousel>
 
       <motion.h2
-        className="h2 mt-5 lg:mt-20"
+        className="h2 mt-10 "
         initial={{ opacity: 0, y: 70, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -138,7 +136,7 @@ const HomeServices = () => {
       >
         <CarouselContent className="-ml-10">
           {CLIENTS.map((client) => (
-            <CarouselItem key={client.name} className="basis-auto pl-10">
+            <CarouselItem key={client.name} className="basis-auto pl-10 mt-4">
               <div className="relative aspect-video h-16 lg:h-32">
                 <Image
                   src={client.image}
