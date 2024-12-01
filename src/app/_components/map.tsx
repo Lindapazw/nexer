@@ -15,7 +15,7 @@ const Map = () => {
       center={position}
       zoom={15}
       scrollWheelZoom={false}
-      className="h-full"
+      className="h-[70vh]"
       attributionControl={false}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

@@ -121,10 +121,7 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link
-                  href="#contact"
-                  aria-label="Ir a la sección de ubicación"
-                >
+                <Link href="#contact" aria-label="Ir a la sección de ubicación">
                   Ubicación
                 </Link>
               </NavigationMenuLink>
@@ -206,7 +203,7 @@ const HomeHeader = () => {
             </Link>
             <Link
               aria-label="Ir a la sección de ubicación"
-              href="#location"
+              href="#contact"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
             >
