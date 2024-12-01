@@ -48,7 +48,7 @@ const HomeContact = () => {
         <ContactForm />
 
         <article className="flex flex-col gap-6 rounded-xl bg-accent px-8 py-6 text-white">
-          <h2 className="h2 mb-0">Información</h2>
+          <h2 className="h3 mb-0">Información</h2>
 
           {nexerData.map((item) => (
             <div className="flex items-center gap-4" key={item.id}>
