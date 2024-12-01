@@ -142,20 +142,13 @@ const HomeTeam = () => {
 
   return (
     <section className="relative min-h-[calc(100vh-3.25rem)] bg-transparent">
-      {/* imagen */}
-      <div
-        className="bg-attach-scroll md:bg-attach-fixed absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/bg_team.png")',
-        }}
-      />
+  
 
       {/* Contenido */}
       <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
           <motion.h3
-            className="h2 text-center text-white md:mt-5"
+            className="h2 text-center text-black md:mt-5"
             initial={{ opacity: 0, y: 70, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}

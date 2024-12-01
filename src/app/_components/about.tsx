@@ -160,7 +160,7 @@ const HomeAbout = () => {
       <div className="text-white">
         <h3 className="text-xl font-bold">Planta Fotovoltaica Neosol</h3>
         <p className="text-lg opacity-80">
-          Ubicación: Villanueva del Pardillo (Madrid)
+          Ubicación: Villanueva del Pardillo
         </p>
       </div>
     </div>

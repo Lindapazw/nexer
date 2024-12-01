@@ -6,7 +6,7 @@ import Whatsapp from "./_icons.tsx/whatsapp";
 
 const HomeFooter = () => {
   return (
-    <div className="container mx-auto flex min-h-[calc(20vh-3.25rem)] items-center justify-between">
+    <div className="container mx-auto flex min-h-[calc(20vh-3.25rem)] items-center justify-between border-t-2 border-secondary">
       <Link href="/#home" aria-label="Volver al inicio">
         <Image src="/logos/logo.png" alt="team" height={80} width={160} />
       </Link>

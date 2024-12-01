@@ -1,7 +1,7 @@
 "use server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
-import { contactSchema } from "../_components/contact";
+import { contactSchema } from "../_components/contact-form";
 
 export async function sendContactInfo(data: z.infer<typeof contactSchema>) {
   const user = process.env.EMAIL_USER;
@@ -19,7 +19,7 @@ export async function sendContactInfo(data: z.infer<typeof contactSchema>) {
   await transporter.sendMail({
     from: user,
     to: receivers,
-    subject: `Nuevo mensaje de ${data.company} - Formulario de contacto`,
+    subject: `Nuevo mensaje de ${data.name} - Formulario de contacto`,
     html: `
         <body>
             <p>Has recibido un nuevo mensaje a través del formulario de contacto:</p>

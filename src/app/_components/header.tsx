@@ -35,7 +35,7 @@ const HomeHeader = () => {
         "fixed top-0 z-20 mx-auto w-full transition-all duration-300",
         {
           "bg-white py-2": isScreenScrolled,
-          "bg-black/25 py-4": !isScreenScrolled,
+          "bg-black/40 py-4": !isScreenScrolled,
         },
       )}
     >
@@ -49,11 +49,11 @@ const HomeHeader = () => {
           />
         </Link>
 
-        <NavigationMenu className="hidden max-w-full grow justify-start lg:flex">
+        <NavigationMenu className="hidden max-w-full grow justify-center lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -67,7 +67,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -81,7 +81,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -98,7 +98,7 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
@@ -115,16 +115,13 @@ const HomeHeader = () => {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "text-base", {
+                className={cn(navigationMenuTriggerStyle(), "text-xl", {
                   "bg-transparent text-white hover:bg-transparent hover:underline focus:bg-transparent focus:underline":
                     !isScreenScrolled,
                 })}
                 asChild
               >
-                <Link
-                  href="#location"
-                  aria-label="Ir a la sección de ubicación"
-                >
+                <Link href="#contact" aria-label="Ir a la sección de ubicación">
                   Ubicación
                 </Link>
               </NavigationMenuLink>
@@ -206,7 +203,7 @@ const HomeHeader = () => {
             </Link>
             <Link
               aria-label="Ir a la sección de ubicación"
-              href="#location"
+              href="#contact"
               className={cn(navigationMenuTriggerStyle(), "w-full text-base")}
               onClick={() => setOpen(false)}
             >
