@@ -75,7 +75,7 @@ const ContactForm = () => {
         className="grid w-full grid-cols-1 gap-4 md:grid-cols-2"
         onSubmit={form.handleSubmit(onSubmit, onSubmitInvalid)}
       >
-        <p className="p text-lg font-bold">Completa los campos:</p>
+        <p className="p text-xl font-bold hidden lg:block">Completa los campos:</p>
 
         <FormField
           control={form.control}
