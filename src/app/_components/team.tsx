@@ -167,12 +167,12 @@ const HomeTeam = () => {
                 <Dialog key={member.name}>
                   <DialogTrigger asChild>
                     <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3">
-                      <div className="relative mb-8 aspect-[3/4] w-full overflow-hidden rounded-md">
+                      <div className="relative mb-8 aspect-[3/4] w-full rounded-md overflow-hidden">
                         <Image
                           src={member.image}
                           alt={member.name}
                           fill
-                          className="absolute inset-0 object-cover object-center"
+                          className="absolute inset-0 object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                         
