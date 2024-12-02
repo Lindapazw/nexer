@@ -37,10 +37,10 @@ const HomeContact = () => {
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] flex-col items-center justify-center py-6">
       <div id="contact" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
 
-      <h2 className="h2 text-center">Cada paso cuenta</h2>
+      <h2 className="h2 text-center">Contáctanos</h2>
 
       <p className="p text-center">
-        Contáctanos para saber más sobre nuestros servicios y cómo podemos
+        Para saber más sobre nuestros servicios y cómo podemos
         ayudarte a impulsar un futuro sostenible.
       </p>
 
