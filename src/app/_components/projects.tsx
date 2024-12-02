@@ -50,8 +50,7 @@ const PROJECTS = [
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "5,6 MW",
-    description:
-      "Previsión inicio construcción: 2025.",
+    description: "Previsión inicio construcción: 2025.",
   },
   {
     name: "PF Calera (RtB)",
@@ -59,8 +58,7 @@ const PROJECTS = [
     year: "2025",
     location: "Cabanillas de la Sierra (Madrid)",
     power: "6,5 MW",
-    description:
-      "Previsión inicio construcción: 2025.",
+    description: "Previsión inicio construcción: 2025.",
   },
   {
     name: "PF Valdesolar",
@@ -103,7 +101,6 @@ const HomeProjects = () => {
 
   return (
     <section className="relative min-h-[calc(100vh-3.25rem)]">
-
       {/* Contenido */}
       <div className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] py-6">
         <div className="flex grow flex-col items-center justify-center">
@@ -128,7 +125,7 @@ const HomeProjects = () => {
           </motion.p>
 
           <Carousel
-            className="container mx-auto mt-0 w-full sm:mt-8 md:mt-20 xl:px-36"
+            className="container mx-auto mt-0 w-full sm:mt-8 md:mt-20 xl:px-0"
             opts={{ loop: true }}
             plugins={[autoplayPlugin.current]}
           >
@@ -136,20 +133,20 @@ const HomeProjects = () => {
               {PROJECTS.map((project) => (
                 <Dialog key={project.name}>
                   <DialogTrigger asChild>
-                    <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/3  ">
-                      <div className="relative aspect-[3/4] w-full ">
+                    <CarouselItem className="relative basis-full cursor-pointer pl-6 md:basis-1/2 lg:basis-1/4">
+                      <div className="relative aspect-[3/4] w-full overflow-hidden">
                         <Image
                           src={project.image}
                           alt={`${project.name} image`}
                           fill
-                          className="absolute inset-0 object-cover object-center"
+                          className="absolute inset-0 object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
 
-                        <div className="span absolute inset-x-0 bottom-0 flex h-12 items-center bg-white pl-24 text-xs md:h-16 md:pl-32 md:text-lg border-b-2">
+                        <div className="span absolute inset-x-0 bottom-0 flex h-12 items-center border-b-2 bg-white pl-24 text-xs md:h-16 md:pl-32 md:text-lg">
                           {project.name}
                         </div>
-                        <div className="absolute bottom-0 left-4 flex aspect-square w-16 flex-col items-center justify-center bg-accent text-sm font-medium text-white md:w-24 md:text-2xl ">
+                        <div className="absolute bottom-0 left-4 flex aspect-square w-16 flex-col items-center justify-center bg-accent text-sm font-medium text-white md:w-24 md:text-2xl">
                           <span className="">{project.year}</span>
                           <span className="text-xs md:text-lg">
                             {project.power}
