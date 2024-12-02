@@ -90,7 +90,8 @@ const PROJECTS = [
     year: "2024",
     location: "Villanueva del Pardillo (Madrid)",
     power: "10 MW",
-    description: "Planta Fotovoltaica Neosol",
+    description:
+      "1º Planta con conexión a red autorizada y construida en la Comunidad de Madrid",
   },
 ];
 
