@@ -164,8 +164,11 @@ const HomeAbout = () => {
           </div>
           <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 opacity-100">
             <div className="text-white">
-              <h3 className="text-xl font-bold">Planta Fotovoltaica Neosol</h3>
-              <p className="text-lg opacity-80">
+              <h3 className="text-lg font-bold">
+                1º Planta con conexión a red autorizada y construida en la
+                Comunidad de Madrid
+              </h3>
+              <p className="text-md opacity-80">
                 Ubicación: Villanueva del Pardillo
               </p>
             </div>
