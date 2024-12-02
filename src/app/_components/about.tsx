@@ -14,10 +14,10 @@ const HomeAbout = () => {
       <div className="lg:order-2">
         <motion.h2
           className="h2 xl:mb-6"
-          initial={{ opacity: 0, y: 70 }}
+          initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           Nos involucramos en la transición hacia un sistema energético
           sostenible
@@ -25,10 +25,10 @@ const HomeAbout = () => {
         <div className="mt-8">
           <motion.p
             className="p mb-4 lg:hidden"
-            initial={{ opacity: 0, y: 70 }}
+            initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
@@ -37,10 +37,10 @@ const HomeAbout = () => {
 
           <motion.p
             className="p hidden lg:block"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
@@ -48,10 +48,10 @@ const HomeAbout = () => {
           </motion.p>
           <motion.p
             className="p hidden lg:block"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             Disponemos de un carácter pionero y una predisposición a la
             innovación en todos los ámbitos del sector, creando valor para
@@ -62,40 +62,40 @@ const HomeAbout = () => {
           <ol className="p my-4 hidden flex-col gap-3 lg:flex xl:my-6">
             <motion.li
               className="span flex gap-2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -70 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               <Check />
               <p>Expertos en proyectos energéticos</p>
             </motion.li>
             <motion.li
               className="span flex gap-2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -70 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               <Check />
               <p>Equipo interdisciplinario</p>
             </motion.li>
             <motion.li
               className="span flex gap-2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -70 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               <Check />
               <p>Soluciones sostenibles</p>
             </motion.li>
             <motion.li
               className="span flex gap-2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -70 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               <Check />
               <p>Multitecnología</p>
@@ -145,7 +145,13 @@ const HomeAbout = () => {
         )}
       </div>
 
-      <div className="relative w-full">
+      <motion.div
+        className="relative w-full"
+        initial={{ opacity: 0, y: 90 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
           <div className="absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
             <Image
@@ -165,7 +171,7 @@ const HomeAbout = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div id="about" className="absolute -top-[3.25rem] h-[3.25rem]"></div>
     </section>
