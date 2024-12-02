@@ -27,9 +27,9 @@ const HomeHero = () => {
 
       <div className="absolute inset-0 h-full w-full bg-black/25"></div>
 
-      <div className="container mx-auto">
+      <div className="container relative z-50 mx-auto flex min-h-screen flex-col items-center justify-center gap-10 pt-20 lg:justify-end lg:gap-36">
         <motion.h1
-          className="absolute inset-x-0 top-1/4 flex flex-col items-center text-white lg:inset-x-auto lg:top-1/2 lg:-translate-y-1/2 lg:items-start"
+          className="flex flex-col items-center text-center text-white lg:items-start lg:self-start"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -48,7 +48,9 @@ const HomeHero = () => {
           del futuro
         </motion.h1>
 
-        <HeroCards className="absolute inset-x-0 top-1/2 w-full flex-col pb-12 lg:bottom-0 lg:top-auto lg:flex-row" />
+        <div className="[@media_(max-height:940px)]:hidden"></div>
+
+        <HeroCards className="w-full flex-col text-center lg:flex-row lg:pb-12" />
       </div>
     </section>
   );
