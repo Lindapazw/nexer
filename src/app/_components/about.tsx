@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 import { useState } from "react";
 import Four from "./_icons.tsx/four";
 import One from "./_icons.tsx/one";
@@ -70,7 +69,7 @@ const HomeAbout = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <Check />
+              <One className="size-7 text-accent" />
               <p>Expertos en proyectos energéticos</p>
             </motion.li>
             <motion.li
@@ -80,7 +79,7 @@ const HomeAbout = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <Check />
+              <Two className="size-7 text-accent" />
               <p>Equipo interdisciplinario</p>
             </motion.li>
             <motion.li
@@ -90,7 +89,7 @@ const HomeAbout = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <Check />
+              <Three className="size-7 text-accent" />
               <p>Soluciones sostenibles</p>
             </motion.li>
             <motion.li
@@ -100,7 +99,7 @@ const HomeAbout = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <Check />
+              <Four className="size-7 text-accent" />
               <p>Multitecnología</p>
             </motion.li>
           </ol>
