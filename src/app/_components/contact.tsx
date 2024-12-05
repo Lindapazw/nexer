@@ -77,7 +77,7 @@ const HomeContact = () => {
 
           {nexerData.map((item) => (
             <div className="flex items-center gap-4" key={item.id}>
-              <item.icon className="size-8 min-w-8" />
+              <item.icon className="size-6 min-w-8" />
 
               <p className="p text-base font-semibold text-white">
                 {item.value}
