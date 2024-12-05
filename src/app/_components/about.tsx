@@ -153,14 +153,6 @@ const HomeAbout = () => {
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
           <div className="absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
-            {/* <Image
-              src="/images/project_neosol.jpg"
-              alt="Proyecto Neosol"
-              fill
-              className="absolute inset-0 rounded-md object-cover"
-              sizes="100vw"
-            /> */}
-
             <video
               autoPlay
               muted
@@ -171,17 +163,6 @@ const HomeAbout = () => {
               <source src="/videos/contact_video.mp4" type="video/mp4" />
             </video>
           </div>
-          {/* <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 opacity-100">
-            <div className="text-white">
-              <h3 className="text-lg font-bold">
-                1º Planta con conexión a red autorizada y construida en la
-                Comunidad de Madrid
-              </h3>
-              <p className="text-md opacity-80">
-                Ubicación: Villanueva del Pardillo
-              </p>
-            </div>
-          </div> */}
         </div>
       </motion.div>
 
