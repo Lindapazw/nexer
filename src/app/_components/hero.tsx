@@ -27,7 +27,7 @@ const HomeHero = () => {
 
       <div className="absolute inset-0 h-full w-full bg-black/25"></div>
 
-      <div className="container relative z-50 mx-auto flex min-h-screen flex-col items-center justify-center gap-10 pt-20 lg:justify-end lg:gap-36">
+      <div className="container relative z-40 mx-auto flex min-h-screen flex-col items-center justify-center gap-10 pt-20 lg:justify-end lg:gap-36">
         <motion.h1
           className="flex flex-col items-center text-center text-white lg:items-start lg:self-start"
           initial={{ opacity: 0, y: 50 }}
