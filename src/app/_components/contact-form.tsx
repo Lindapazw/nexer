@@ -13,8 +13,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-import { phone } from "@/lib/validators";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { isValidPhoneNumber, parsePhoneNumber } from "libphonenumber-js/min";
 import { CircleX, LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -25,7 +25,16 @@ export const contactSchema = z.object({
   company: z.string().optional(),
   email: z.string().email({ message: "Formato de correo inválido." }),
   message: z.string().min(1, { message: "Campo obligatorio." }),
-  phoneNumber: phone(z.string(), "Teléfono inválido.").optional(),
+  phoneNumber: z
+    .string()
+    .refine(
+      (value) => !value || isValidPhoneNumber(value),
+      "Formato de teléfono inválido.",
+    )
+    .transform((value) =>
+      value ? parsePhoneNumber(value)?.number.toString() : "",
+    )
+    .optional(),
   // privacyAgreement: z.literal<boolean>(true),
 });
 
@@ -75,7 +84,9 @@ const ContactForm = () => {
         className="grid w-full grid-cols-1 gap-4 md:grid-cols-2"
         onSubmit={form.handleSubmit(onSubmit, onSubmitInvalid)}
       >
-        <p className="p text-xl font-bold hidden lg:block">Completa los campos:</p>
+        <p className="p hidden text-xl font-bold lg:block">
+          Completa los campos:
+        </p>
 
         <FormField
           control={form.control}
