@@ -9,8 +9,10 @@ import {
 } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
+import dynamic from "next/dynamic";
 import ContactForm from "./contact-form";
-import Map from "./map";
+
+const Map = dynamic(() => import("./map"));
 
 const nexerData = [
   {
