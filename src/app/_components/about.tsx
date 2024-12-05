@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useState } from "react";
+import Four from "./_icons.tsx/four";
+import One from "./_icons.tsx/one";
+import Three from "./_icons.tsx/three";
+import Two from "./_icons.tsx/two";
 
 const HomeAbout = () => {
   const [visible, setVisible] = useState(false);
@@ -124,19 +128,19 @@ const HomeAbout = () => {
 
             <ol className="p my-4 flex-col gap-3 pb-6 lg:hidden">
               <li className="span flex gap-2">
-                <Check />
+                <One className="size-7 text-accent" />
                 <p>Expertos en proyectos energéticos</p>
               </li>
               <li className="span flex gap-2">
-                <Check />
+                <Two className="size-7 text-accent" />
                 <p>Equipo interdisciplinario</p>
               </li>
               <li className="span flex gap-2">
-                <Check />
+                <Three className="size-7 text-accent" />
                 <p>Soluciones sostenibles</p>
               </li>
               <li className="span flex gap-2">
-                <Check />
+                <Four className="size-7 text-accent" />
                 <p>Multitecnología</p>
               </li>
             </ol>
