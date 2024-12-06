@@ -11,8 +11,6 @@ const HomeAbout = () => {
 
   return (
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col items-center justify-center py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
-      {/* Texto */}
-
       <div className="lg:order-2">
         <motion.h2
           className="h2 xl:mb-6"
