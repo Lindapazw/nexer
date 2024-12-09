@@ -59,48 +59,26 @@ const HomeAbout = () => {
             capacitación.
           </motion.p>
 
-          <ol className="p my-4 hidden flex-col gap-3 lg:flex xl:my-6">
-            <motion.li
-              className="span flex gap-2"
-              initial={{ opacity: 0, y: -70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <One className="size-7 text-accent" />
-              <p>Expertos en proyectos energéticos</p>
-            </motion.li>
-            <motion.li
-              className="span flex gap-2"
-              initial={{ opacity: 0, y: -70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <Two className="size-7 text-accent" />
-              <p>Equipo interdisciplinario</p>
-            </motion.li>
-            <motion.li
-              className="span flex gap-2"
-              initial={{ opacity: 0, y: -70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <Three className="size-7 text-accent" />
-              <p>Soluciones sostenibles</p>
-            </motion.li>
-            <motion.li
-              className="span flex gap-2"
-              initial={{ opacity: 0, y: -70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <Four className="size-7 text-accent" />
-              <p>Multitecnología</p>
-            </motion.li>
-          </ol>
+          <motion.ol
+            className="p my-4 hidden flex-col gap-3 rounded-md bg-accent p-4 text-white lg:flex xl:my-6"
+            initial={{ opacity: 0, y: -70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <li className="span flex gap-2">
+              <p>1. Expertos en proyectos energéticos</p>
+            </li>
+            <li className="span flex gap-2">
+              <p>2. Equipo interdisciplinario</p>
+            </li>
+            <li className="span flex gap-2">
+              <p>3. Soluciones sostenibles</p>
+            </li>
+            <li className="span flex gap-2">
+              <p>4. Multitecnología</p>
+            </li>
+          </motion.ol>
         </div>
 
         <motion.button
