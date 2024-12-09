@@ -153,7 +153,7 @@ const HomeAbout = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
-          <div className="absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
+          <div className="absolute inset-0">
             <video
               autoPlay
               muted
