@@ -37,7 +37,7 @@ const HomeAbout = () => {
           </motion.p>
 
           <motion.p
-            className="p hidden lg:block"
+            className="p mb-10 hidden lg:block lg:pr-14"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -45,23 +45,14 @@ const HomeAbout = () => {
           >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
-            que hacen realidad la Transición Energética{" "}
-          </motion.p>
-          <motion.p
-            className="p hidden lg:block"
-            initial={{ opacity: 0, y: -70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            Disponemos de un carácter pionero y una predisposición a la
-            innovación en todos los ámbitos del sector, creando valor para
-            nuestros clientes a través de nuestra especialización y
-            capacitación.
+            que hacen realidad la Transición Energética. Disponemos de un
+            carácter pionero y una predisposición a la innovación en todos los
+            ámbitos del sector, creando valor para nuestros clientes a través de
+            nuestra especialización y capacitación.
           </motion.p>
 
           <motion.ol
-            className="p my-4 hidden flex-col gap-3 rounded-md bg-[#BAC4BA] p-4 text-black lg:flex xl:my-10"
+            className="p xl:pr-30 my-4 hidden flex-col gap-3 rounded-md bg-[#BAC4BA] p-4 text-black lg:flex xl:mr-16"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
