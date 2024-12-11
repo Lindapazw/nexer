@@ -61,7 +61,7 @@ const HomeAbout = () => {
           </motion.p>
 
           <motion.ol
-            className="p my-4 hidden flex-col gap-3 rounded-md bg-accent p-4 text-white lg:flex xl:my-10"
+            className="p my-4 hidden flex-col gap-3 rounded-md bg-[#BAC4BA] p-4 text-black lg:flex xl:my-10"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -81,7 +81,7 @@ const HomeAbout = () => {
             </li>
             <li className="span flex gap-2">
               <Check />
-              <p>Multitecnología</p>
+              <p>Multi-tecnología</p>
             </li>
           </motion.ol>
         </div>
