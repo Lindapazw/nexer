@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 import { useState } from "react";
 import Four from "./_icons.tsx/four";
 import One from "./_icons.tsx/one";
@@ -67,16 +68,20 @@ const HomeAbout = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <li className="span flex gap-2">
-              <p>1. Expertos en proyectos energéticos</p>
+              <Check />
+              <p>Expertos en proyectos energéticos</p>
             </li>
             <li className="span flex gap-2">
-              <p>2. Equipo interdisciplinario</p>
+              <Check />
+              <p>Equipo interdisciplinario</p>
             </li>
             <li className="span flex gap-2">
-              <p>3. Soluciones sostenibles</p>
+              <Check />
+              <p>Soluciones sostenibles</p>
             </li>
             <li className="span flex gap-2">
-              <p>4. Multitecnología</p>
+              <Check />
+              <p>Multitecnología</p>
             </li>
           </motion.ol>
         </div>
