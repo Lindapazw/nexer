@@ -13,7 +13,7 @@ const HomeAbout = () => {
     <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col items-center justify-center py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
       <div className="lg:order-2">
         <motion.h2
-          className="h2 xl:mb-6"
+          className="h2 xl:mb-10"
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -60,7 +60,7 @@ const HomeAbout = () => {
           </motion.p>
 
           <motion.ol
-            className="p my-4 hidden flex-col gap-3 rounded-md bg-accent p-4 text-white lg:flex xl:my-6"
+            className="p my-4 hidden flex-col gap-3 rounded-md bg-accent p-4 text-white lg:flex xl:my-10"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
