@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -209,21 +207,6 @@ const HomeHeader = () => {
             >
               Ubicación
             </Link>
-
-            <DrawerFooter className="pt-2">
-              <DrawerClose asChild>
-                <Button
-                  aria-labelledby="botón de cerrar"
-                  variant="outline"
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "w-full text-base",
-                  )}
-                >
-                  Cerrar
-                </Button>
-              </DrawerClose>
-            </DrawerFooter>
           </DrawerContent>
         </Drawer>
       </div>
