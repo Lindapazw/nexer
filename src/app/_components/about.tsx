@@ -130,8 +130,8 @@ const HomeAbout = () => {
           <div className="absolute inset-0">
             <video
               autoPlay
-              muted
               loop
+              muted
               playsInline
               className="absolute inset-0 h-full w-full"
             >
