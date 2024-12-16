@@ -11,10 +11,10 @@ const HomeAbout = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col items-center justify-center py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-40">
+    <section className="container relative mx-auto flex min-h-[calc(100vh-3.25rem)] w-full flex-col items-center justify-center py-6 lg:grid lg:grid-cols-2 lg:gap-20 lg:py-20">
       <div className="lg:order-2">
         <motion.h2
-          className="h2 xl:mb-10"
+          className="h2 lg:pr-14 xl:mb-10"
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -25,7 +25,7 @@ const HomeAbout = () => {
         </motion.h2>
         <div className="mt-8">
           <motion.p
-            className="p mb-4 lg:hidden"
+            className="p mb-4 text-justify lg:hidden"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -33,11 +33,11 @@ const HomeAbout = () => {
           >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
-            que hacen realidad la Transición Energética{" "}
+            que hacen realidad la Transición Energética
           </motion.p>
 
           <motion.p
-            className="p mb-10 hidden lg:block lg:pr-14"
+            className="p mb-10 hidden text-justify lg:block lg:pr-14"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -45,14 +45,17 @@ const HomeAbout = () => {
           >
             Somos una firma independiente especializada en la identificación y
             <span className="span"> desarrollo de proyectos </span> innovadores
-            que hacen realidad la Transición Energética. Disponemos de un
-            carácter pionero y una predisposición a la innovación en todos los
-            ámbitos del sector, creando valor para nuestros clientes a través de
-            nuestra especialización y capacitación.
+            que hacen realidad la Transición Energética.
+            <br />
+            <br />
+            Disponemos de un carácter pionero y una predisposición a la
+            innovación en todos los ámbitos del sector, creando valor para
+            nuestros clientes a través de nuestra especialización y
+            capacitación.
           </motion.p>
 
           <motion.ol
-            className="p xl:pr-30 my-4 hidden flex-col gap-3 rounded-md bg-[#BAC4BA] p-4 text-black lg:flex xl:mr-16"
+            className="p my-4 hidden flex-col gap-3 rounded-md bg-[#BAC4BA] p-4 text-black lg:flex xl:mr-14"
             initial={{ opacity: 0, y: -70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -127,7 +130,7 @@ const HomeAbout = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
-          <div className="absolute inset-0 flex flex-col justify-center transition-transform duration-300 ease-in-out group-hover:scale-110">
+          <div className="absolute inset-0 flex flex-col justify-center transition-transform duration-300 ease-in-out">
             {/* <Image
               src="/images/project_neosol.jpg"
               alt="Proyecto Neosol"
