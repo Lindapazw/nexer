@@ -127,13 +127,21 @@ const HomeAbout = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 flex flex-col justify-center transition-transform duration-300 ease-in-out group-hover:scale-110">
+            {/* <Image
+              src="/images/project_neosol.jpg"
+              alt="Proyecto Neosol"
+              fill
+              className="absolute inset-0 rounded-md object-cover"
+              sizes="100vw"
+            /> */}
+
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="absolute inset-0 h-full w-full"
+              className="aspect-[21/9] w-full"
             >
               <source src="/videos/contact_video.mp4" type="video/mp4" />
             </video>
