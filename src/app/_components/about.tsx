@@ -136,7 +136,7 @@ const HomeAbout = () => {
               loop
               muted
               playsInline
-              className="aspect-[21/9] w-full"
+              className="aspect-[192/83] w-full"
             >
               <source src="/videos/contact_video.mp4" type="video/mp4" />
             </video>
