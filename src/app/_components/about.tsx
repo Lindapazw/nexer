@@ -130,13 +130,13 @@ const HomeAbout = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
-          <div className="absolute inset-0 flex flex-col justify-center transition-transform duration-300 ease-in-out">
+          <div className="absolute inset-0 flex flex-col justify-center">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="aspect-[192/83] w-full"
+              className="aspect-[192/83] rounded-lg border-white object-cover"
             >
               <source src="/videos/contact_video.mp4" type="video/mp4" />
             </video>
