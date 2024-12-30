@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import Four from "./_icons.tsx/four";
 import One from "./_icons.tsx/one";
@@ -131,15 +132,14 @@ const HomeAbout = () => {
       >
         <div className="group relative min-h-[50vh] w-full overflow-hidden rounded-xl">
           <div className="absolute inset-0 flex flex-col justify-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="aspect-[192/83] rounded-lg border-white object-cover"
-            >
-              <source src="/videos/contact_video.mp4" type="video/mp4" />
-            </video>
+            <Image
+              src="/images/contact_video.gif"
+              className="aspect-[192/83] object-contain"
+              alt="video"
+              fill
+              priority
+              unoptimized
+            />
           </div>
         </div>
       </motion.div>
