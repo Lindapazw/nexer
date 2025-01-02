@@ -9,7 +9,7 @@ import HomeTeam from "./_components/team";
 
 export default function Home() {
   return (
-    <main className="relative bg-white">
+    <main className="relative bg-[#FBFCFB]">
       <HomeHeader />
       <HomeHero />
       <HomeAbout />
