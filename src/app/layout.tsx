@@ -10,7 +10,7 @@ import "./globals.css";
 
 dayjs.locale("es");
 
-// probando coautores
+// probando coautores 2 desde mi rama
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
