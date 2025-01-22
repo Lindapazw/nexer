@@ -10,6 +10,8 @@ import "./globals.css";
 
 dayjs.locale("es");
 
+// probando coautores
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
