@@ -1,5 +1,3 @@
-// Linda Paz
-
 import { Toaster } from "@/components/ui/toaster";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
