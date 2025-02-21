@@ -18,7 +18,7 @@ const SERVICES = [
     icon: <Presentation />,
     name: "Desarrollo de Proyectos",
     description:
-      "Identificamos, diseñamos y desarrollamos proyectos desde su fase inicial hasta su puesta en marcha, asegurando la viabilidad técnica.",
+      "Identificamos, diseñamos y desarrollamos proyectos viables desde su fase inicial hasta su puesta en marcha",
   },
   {
     icon: <ChartColumnBig />,
