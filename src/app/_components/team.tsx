@@ -157,6 +157,16 @@ const HomeTeam = () => {
             Nuestro equipo
           </motion.h3>
 
+          <motion.p
+            className="p mb-4 text-black"
+            initial={{ opacity: 0, y: 70, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          >
+            Acumulamos proyectos de éxito en el mercado nacional e internacional a lo largo de más de 20 años.
+          </motion.p>
+
           <Carousel
             className="container mx-auto mt-4 w-full px-6 md:mt-8 md:px-0 lg:mt-20 xl:px-36"
             opts={{ startIndex: 1, loop: true }}

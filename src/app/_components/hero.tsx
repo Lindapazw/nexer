@@ -35,7 +35,7 @@ const HomeHero = () => {
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Promoviendo la
+          Impulsando la
           <motion.span
             className="font-bold"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -43,7 +43,7 @@ const HomeHero = () => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Energía sostenible
+            Energía
           </motion.span>
           del futuro
         </motion.h1>

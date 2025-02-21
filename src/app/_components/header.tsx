@@ -119,23 +119,13 @@ const HomeHeader = () => {
                 })}
                 asChild
               >
-                <Link href="#contact" aria-label="Ir a la sección de ubicación">
-                  Ubicación
+                <Link href="#contact" aria-label="Ir a la sección de contacto">
+                  Contacto
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-
-        <Button
-          className="hidden text-base lg:block"
-          asChild
-          aria-labelledby="botón de contacto"
-        >
-          <Link href="#contact" aria-label="Ir a la sección de contacto">
-            Contáctanos
-          </Link>
-        </Button>
 
         <div className="block grow lg:hidden"></div>
 
