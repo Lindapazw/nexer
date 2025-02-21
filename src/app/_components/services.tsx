@@ -24,7 +24,7 @@ const SERVICES = [
     icon: <ChartColumnBig />,
     name: "Planificación Estratégica",
     description:
-      "Creamos estrategias adaptadas para maximizar el impacto y la eficiencia de los proyectos, alineándonos con objetivos de sostenibilidad.",
+      "Creamos estrategias adaptadas para maximizar el impacto y la eficiencia de los proyectos",
   },
   {
     icon: <Handshake />,
