@@ -24,11 +24,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Nexer - Soluciones de Impulsando la energía del futuro",
+  title: "Nexer - Soluciones de Energía Sostenible",
   description:
     "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
   openGraph: {
-    title: "Nexer - Soluciones de Impulsando la energía del futuro",
+    title: "Nexer - Soluciones de Energía Sostenible",
     description:
       "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
     type: "website",
@@ -38,19 +38,19 @@ export const metadata: Metadata = {
         url: neosol.src,
         width: 800,
         height: 600,
-        alt: "Soluciones de Impulsando la energía del futuro por Nexer",
+        alt: "Soluciones de Energía Sostenible por Nexer",
       },
       {
         url: hita_tardio.src,
         width: 800,
         height: 600,
-        alt: "Soluciones de Impulsando la energía del futuro por Nexer",
+        alt: "Soluciones de Energía Sostenible por Nexer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexer - Soluciones de Impulsando la energía del futuro",
+    title: "Nexer - Soluciones de Energía Sostenible",
     description:
       "Somos una firma independiente especializada en la identificación y desarrollo de proyectos innovadores que hacen realidad la Transición Energética",
     images: [neosol.src, hita_tardio.src],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "Impulsando la energía del futuro",
+    "energía sostenible",
     "soluciones de energía",
     "paneles solares",
     "eficiencia energética",
