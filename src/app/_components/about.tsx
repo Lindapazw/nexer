@@ -21,8 +21,7 @@ const HomeAbout = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          Nos involucramos en la transición hacia un sistema energético
-          sostenible
+          Ayudamos a construir un modelo energético sostenible
         </motion.h2>
         <div className="mt-8">
           <motion.p
