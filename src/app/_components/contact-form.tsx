@@ -19,6 +19,13 @@ import { CircleX, LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { sendContactInfo } from "../actions/send-contact-info";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export const contactSchema = z.object({
   name: z.string().min(1, { message: "Campo obligatorio." }),
@@ -37,6 +44,49 @@ export const contactSchema = z.object({
     .optional(),
   // privacyAgreement: z.literal<boolean>(true),
 });
+
+const TERMS = (
+  <>
+    <p> 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula,
+      velit at volutpat volutpat, orci ligula facilisis lorem, 
+      ac faucibus purus sapien ut nulla. Integer et eros id justo laoreet aliquet. 
+      Donec tincidunt purus ac magna fringilla, 
+      at aliquet nunc sagittis. Vivamus fermentum, sapien a faucibus ultrices, 
+      augue nisi scelerisque ligula, a tempus mauris justo ac leo. 
+    </p>
+    <p> 
+      Curabitur suscipit arcu non mi placerat, non elementum lacus tincidunt. 
+      Fusce auctor orci nec nisl eleifend, vel fermentum nisi scelerisque. 
+      Sed et venenatis nunc. Nunc bibendum, velit eu sagittis pharetra, 
+      libero elit hendrerit urna, sit amet pellentesque neque nisl a augue. 
+      Suspendisse at dui non lorem viverra scelerisque id eget risus. 
+      Sed facilisis erat id lectus posuere, in consectetur eros eleifend. 
+      Duis vitae libero sapien. 
+    </p> 
+    <p> 
+        Aliquam eu metus ut felis hendrerit aliquet. 
+        Aenean sed arcu vitae libero tempus fermentum nec id mi. 
+        Vestibulum tincidunt, nunc in faucibus elementum, ex elit lobortis mauris, 
+        non ultricies nunc metus at erat. Phasellus tristique arcu ac est dictum, 
+        vel iaculis est lobortis. Ut sit amet orci sit amet elit aliquet sodales. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et 
+        ultrices posuere cubilia curae; Vivamus a odio lorem. 
+        Donec volutpat sapien sed nulla cursus, et tristique felis tincidunt. 
+        Praesent consequat, eros id fermentum iaculis, eros felis dapibus ligula, 
+        at tincidunt erat sapien a quam. 
+      </p>
+      <p> 
+        Curabitur suscipit arcu non mi placerat, non elementum lacus tincidunt. 
+        Fusce auctor orci nec nisl eleifend, vel fermentum nisi scelerisque. 
+        Sed et venenatis nunc. Nunc bibendum, velit eu sagittis pharetra, 
+        libero elit hendrerit urna, sit amet pellentesque neque nisl a augue. 
+        Suspendisse at dui non lorem viverra scelerisque id eget risus. 
+        Sed facilisis erat id lectus posuere, in consectetur eros eleifend. 
+        Duis vitae libero sapien. 
+      </p> 
+  </>
+)
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -228,7 +278,25 @@ const ContactForm = () => {
           </FormLabel>
         </FormItem>
       )}
-    /> */}
+    /> */
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <div className=" cursor-pointer">
+                <p>Si continúas, aceptas los <span className="underline span"> Términos y Condiciones</span>. </p>
+              </div>
+            </DialogTrigger>
+
+            <DialogContent className="max-h-full overflow-y-auto">
+              <DialogHeader className="sticky -top-6 bg-white py-2">
+                <DialogTitle>Términos y Condiciones:</DialogTitle>
+              </DialogHeader>
+
+              {TERMS}
+            </DialogContent>
+          </Dialog>
+
+        }
 
         <Button
           aria-labelledby="botón de enviar email"
